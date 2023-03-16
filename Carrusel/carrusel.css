@@ -15,17 +15,17 @@
 
 #tarjetaCarrusel1{
     height: 100%;
-    background-color: rgb(149, 225, 217);
+    background-color: thistle;
 }
 
 #tarjetaCarrusel2{
     height: 100%;
-    background-color: rgb(176, 102, 246);
+    background-color: thistle;
 }
 
 #tarjetaCarrusel3{
     height: 100%;
-    background-color: rgb(114, 114, 252);
+    background-color: thistle;
 }
 
 .itemCarrusel{
