@@ -1,72 +1,96 @@
 *{
+    margin: 2px;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    position: relative;
 }
 
-#conteinerCarrusel{
-    border: 5px solid black;
-    height: 200px;
-    overflow: hidden;
-
-    
+.contenedor{
+    width: 100%;
 }
 
-#tarjetaCarrusel1{
-    height: 100%;
-    background-color: thistle;
-}
-
-#tarjetaCarrusel2{
-    height: 100%;
-    background-color: thistle;
-}
-
-#tarjetaCarrusel3{
-    height: 100%;
-    background-color: thistle;
-}
-
-.itemCarrusel{
-    border: 1px solid black;
-    height: 200px;
-}
-
-.tarjetaCarrusel{
-    height: 100%;
-    text-align: center;
-}
-
-.flechas{
-    position: absolute;
-    top: 0;
-    height: 100%;
+.sliderContenedor{
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    overflow: hidden;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
-#conteinerPuntos{
+.contenidoSlider{
+    width: 100%;
+    height: 500px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-#conteinerPuntos > a {
-    font-size: 1.5cm;
-    font-style: none;
-    color: rgb(108, 57, 237);
+.contenidoSlider > img{
+    display: block;
+    width: 300px;
 }
 
-img{
-    justify-content: end;
+.contenidoSlider > div{
+    width: 40%;
+}
+
+.contenidoSlider h2{
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenidoSlider h3{
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenidoSlider a{
+    color: white;
+    background-color: rgb(240, 84, 0);
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+#Texto{
+    width: 40%;
+}
+
+#tarjeta1{
+    background-color:chartreuse;
+}
+
+#tarjeta2{
+    background-color: turquoise;
+}
+
+#tarjeta3{
+    background-color:coral;
+}
+
+.direcciones{
+    width: 99%;
     height: 100%;
-    width: 700px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.direcciones a{
+    color: blue;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.direcciones a:hover{
+    background: rgba(255, 255, 255, 0.5);
+    transition: .5s;
 }

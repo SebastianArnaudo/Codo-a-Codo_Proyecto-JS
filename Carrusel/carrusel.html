@@ -9,58 +9,42 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="conteinerCarrusel">
-        <div class="itemCarrusel" id="itemCarrusel-1">
-            <div class="tarjeta" id="tarjetaCarrusel1">
+    <div class="Contenedor">
+        <div class="sliderContenedor">
+
+            <section class="contenidoSlider" id="tarjeta1">
+                <div>
+                    <h2>Perú</h2>
+                    <h3>Con paisajes tan variados como selvas, desierto y corrdilleras, <br> podras visitar lugares tan famosos como Machu-Picchu</h3>
+                    <a href="#">Saber Más</a>
+                </div>
                 <img src="imagenCarussel/Perú/Machu-Picchu.jpg" alt="Machu-Picchu">
-            </div>
+            </section>
+        
+            <section class="contenidoSlider" id="tarjeta2">
+                <div>
+                    <h2>Brasil</h2>
+                    <h3>Hogar de las mejores playas del sur del continente <br> y del Cristo Redentor, maravilla del mundo</h3>
+                    <a href="#">Saber Más</a>
+                </div>
+                <img src="imagenCarussel/Brasil/Playa.jpg" alt="Rio de Janeiro">
+            </section>
 
-            <div class="flechas">
-                <a href="#itemCarrusel-3">
-                    <i>I</i>
-                </a>
-                <a href="#itemCarrusel-2">
-                    <i>D</i>
-                </a>
-            </div>
+            <section class="contenidoSlider" id="tarjeta3">
+                <div>
+                    <h2>Chile</h2>
+                    <h3>Nuestro destino mas austral. En el podras encontrar desiertos, bosque y glasiares, asi como visitar la fanosa <br> Isla de Pascua</h3>
+                    <a href="#">Saber Más</a>
+                </div>
+                <img src="imagenCarussel/Chile/pascua.jpg" alt="Isla de Pascua">
+            </section>
         </div>
 
-        <div class="itemCarrusel"id="itemCarrusel-2">
-            <div class="tarjeta"id="tarjetaCarrusel2">
-                <img src="imagenCarussel/Brasil/Playa.jpg" alt="Playa Dos Carneiros ">
-            </div>
-
-            <div class="flechas">
-                <a href="#itemCarrusel-1">
-                    <i>I</i>
-                </a>
-                <a href="#itemCarrusel-3">
-                    <i>D</i>
-                </a>
-            </div>
+        <div class="direcciones">
+            <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094</a>
+            <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095</a>
         </div>
-
-        <div class="itemCarrusel" id="itemCarrusel-3">
-            <div class="tarjeta" id="tarjetaCarrusel3">
-                <img src="imagenCarussel/Chile/Atacama.jpg" alt=" desierto Atacama">
-            </div>
-
-            <div class="flechas">
-                <a href="#itemCarrusel-2">
-                    <i>I</i>
-                </a>
-                <a href="#itemCarrusel-1">
-                    <i>D</i>
-                </a>
-            </div>
-        </div>
-
     </div>
-
-    <div id="conteinerPuntos">
-        <a href="#itemCarrusel-1">°</a>
-        <a href="#itemCarrusel-2">°</a>
-        <a href="#itemCarrusel-3">°</a>
-    </div>
+    <script src="carrusel.js"></script>
 </body>
 </html>
