@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Proyecto</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <div class="navbar">
+                <div class="logo" src="img/logo.png"><a href="#"></a></div>
+
+                <ul class="links">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+
+                <a href="#" class="coffee_btn">¡Reserve Ya!</a>
+
+                <!-- menuBar-->
+                <div class="toggle_btn"> 
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown_menu">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="#" class="coffee_btn">No hago nada</a></li>
+            </div>
+        </header>
+
+        <!-- js para abrir el menu -->
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function(){
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('Open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    </section>
+
+    <!-- SLIDER SEBASTIAN-->
+    <div class="Contenedor">
+        <div class="sliderContenedor">
+
+            <section class="contenidoSlider" id="tarjeta1" >
+                <div>
+                    <h2>Perú</h2>
+                    <h3>Con paisajes tan variados como selvas, desierto y corrdilleras, <br> podras visitar lugares tan famosos como Machu-Picchu</h3>
+                    <a href="#">Saber Más</a>
+                </div>
+                <img src="imagenCarussel/Perú/Machu-Picchu.jpg" alt="Machu-Picchu"> 
+            </section>
+        
+            <section class="contenidoSlider" id="tarjeta2">
+                <div>
+                    <h2>Brasil</h2>
+                    <h3>Hogar de las mejores playas del sur del continente <br> y del Cristo Redentor, maravilla del mundo</h3>
+                    <a href="#">Saber Más</a>
+                </div>
+                <img src="imagenCarussel/Brasil/Playa.jpg" alt="Rio de Janeiro">
+            </section>
+
+            <section class="contenidoSlider" id="tarjeta3">
+                <div>
+                    <h2>Chile</h2>
+                    <h3>Nuestro destino mas austral. En el podras encontrar desiertos, bosque y glasiares, asi como visitar la fanosa <br> Isla de Pascua</h3>
+                    <a href="#">Saber Más</a>
+                </div>
+                <img src="imagenCarussel/Chile/pascua.jpg" alt="Isla de Pascua">
+            </section>
+        </div>
+
+        <div class="direcciones">
+            <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094</a>
+            <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095</a>
+        </div>
+    </div>
+
+</body>
+        
+<footer class="footer">
+    <img class="footer-logo" src="logo23.png" alt="Logo de la empresa">
+    <div class="footer-links">
+        
+      <a href="#">Aviso legal</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+    <div class="footer-help">
+      <a href="#">Información para su viaje</a>
+      <a href="#">Documentación para su viaje</a>
+      <a href="#">Mascotas a bordo</a>
+      <a href="#">Preguntas frecuentes</a>
+    </div>
+
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="FBlogo.jpg" alt="Logo de Facebook." width="36" height="36"></a>
+    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="twiterlogo.jpg" alt="Logo de Twitter." width="36" height="36"></a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="instagramlogo.jpg" alt="Logo de Instagram." width="36" height="36"></a>
+    <a href="https://api.whatsapp.com/send?phone=5491151136326&amp;text=Hola,%20quisiera%20asesoramiento" target="_blank"><img src="wsplogo.jpg" alt="Logo de Whatsapp." width="36" height="36"></a>
+    <a href="http://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="youtubelogo.jpg" alt="Logo de Youtube." width="36" height="36"></a>
+    <a href="/contactanos"><img src="gmaillogo.jpg" alt="Lleva al formuario de Contacto" width="36" height="36"></a></li>
+    
+  </footer>
+
+</html>
