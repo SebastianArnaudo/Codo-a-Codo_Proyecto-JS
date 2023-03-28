@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <title>Proyecto</title>
 </head>
 
@@ -14,30 +16,32 @@
     <section>
         <header>
             <div class="navbar">
-                <div class="logo" src="img/logo.png"><a href="#"></a></div>
+                <div class="logo">
+                    <a href="#"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                </div>
 
                 <ul class="links">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Viajes</a></li>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Contáctenos</a></li>
                 </ul>
 
                 <a href="#" class="coffee_btn">¡Reserve Ya!</a>
 
                 <!-- menuBar-->
-                <div class="toggle_btn"> 
+                <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
 
             <!-- DROPDOWN -->
-            <div class="dropdown_menu">
-                <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="#" class="coffee_btn">No hago nada</a></li>
+            <div class="dropdown_menu open">
+                <li><a href="home">Inicio</a></li>
+                <li><a href="about">Viajes</a></li>
+                <li><a href="services">Quiénes Somos</a></li>
+                <li><a href="contact">Contáctenos</a></li>
+                <li><a href="#" class="coffee_btn">¡Reserve Ya!</a></li>
             </div>
         </header>
 
@@ -47,13 +51,9 @@
             const toggleBtnIcon = document.querySelector('.toggle_btn i')
             const dropDownMenu = document.querySelector('.dropdown_menu')
 
-            toggleBtn.onclick = function(){
+            toggleBtn.onclick = function () {
                 dropDownMenu.classList.toggle('open')
                 const isOpen = dropDownMenu.classList.contains('Open')
-
-                toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-bars'
             }
         </script>
     </section>
