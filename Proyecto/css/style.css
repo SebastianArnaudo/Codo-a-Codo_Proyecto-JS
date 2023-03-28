@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,7 @@ body {
 
 }
 
+/*Barra de navegacion*/
 li {
     list-style: none;
 }
@@ -25,10 +25,9 @@ a {
 }
 
 a:hover {
-    color: orange;
+    color: #d97925;
 }
 
-/* Header :) */
 header {
     position: relative;
     padding: 0 2rem;
@@ -45,9 +44,17 @@ header {
     justify-content: space-between;
 }
 
-.navbar .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar .links li:hover{
+    transform: scale(1.1);
+}
+
+.navbar .logo img {
+    width: 4rem;
+    position: relative;
+}
+
+.navbar .logo img:hover{
+    transform: scale(1.1);
 }
 
 .navbar .links {
@@ -56,14 +63,14 @@ header {
 }
 
 .navbar .toggle_btn {
-    color: #666547;
+    color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 
 .coffee_btn {
-    background-color: orange;
+    background-color: #d97925;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
@@ -84,7 +91,7 @@ header {
     scale: 0.95;
 }
 
-/* Dropdown */
+/* Dropdown menu de navbar (responsiveness) */
 .dropdown_menu {
     display: none;
     position: absolute;
@@ -92,8 +99,8 @@ header {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    background: #0A3B59;
+    backdrop-filter: blur(5px);
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -116,23 +123,12 @@ header {
     justify-content: center;
 }
 
-/* Home */
-section#home {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
 #home h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-/* Responsiveness */
+/* Define tamaño segun pantalla (Responsiveness) */
 @media(max-width: 992px) {
 
     .navbar .links,
@@ -155,6 +151,7 @@ section#home {
         width: unset;
     }
 }
+/*fin de estilo barra de navegacion*/
 
 
 /*SLIDER SEBA*/
