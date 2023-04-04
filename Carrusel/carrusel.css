@@ -9,7 +9,7 @@
 
 .contenedor{
     width: 100%;
-    margin: 2px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;    
 }
@@ -96,14 +96,9 @@
 }
 
 .direcciones{
-    padding: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
     position: absolute;
-    top: 0;
+    top: 30%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 20px;
 }
 
@@ -119,15 +114,23 @@
     transition: .5s;
 }
 
+#atras{
+    align-self: flex-start;
+}
+
+#adelante{
+    align-self: flex-end;
+}
+
 .contenedorBotones{
     text-align: center;
-    margin: 20px;
+    margin: 1%;
 }
 .botones{
-    display: inline-block;
+    display: inline-flex;
     text-align: center;
-    position: absolute;
-    align-items: center;
+    justify-content:space-around;
+
 }
 
 .botones >a{
@@ -137,9 +140,9 @@
     text-align: center;
     text-decoration: none;
     background-color: #D97925;
-    padding: 10px;
-    width: 30px;
-    height: 30px;
+    padding: 60%;
+    width: 50%;
+    height: 50%;
     font-size: 20px;
     border-radius: 100%;
     cursor: pointer;
@@ -147,6 +150,6 @@
 
 
 .botones >a:hover{
-    background: rgba(255, 255, 255, 0.5);
+    background:rgba(217, 122, 38, 0.5);
     transition: .5s;
 }
