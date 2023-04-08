@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/carrusel.css" />
+    <link rel="stylesheet" href="css/destinos.css" />
+    <link rel="stylesheet" href="css/atencionalcliente.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Go! To Travel</title>
+</head>
+
+<body>
+    <section> <!-- Barra de navegacion-->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                </div>
+
+                <ul class="links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Viajes</a></li>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+
+                <a href="#" class="action_btn">¡Reserve Ya!</a>
+
+                <!-- menuBar-->
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown_menu open">
+                <li><a href="home">Inicio</a></li>
+                <li><a href="about">Viajes</a></li>
+                <li><a href="services">Quiénes Somos</a></li>
+                <li><a href="contact">Contáctenos</a></li>
+                <li><a href="#" class="action_btn">¡Reserve Ya!</a></li>
+            </div>
+        </header>
+
+        <!-- .js para abrir el menu -->
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('Open')
+            }
+        </script>
+    </section>
+
+    <section class="formulario">
+        <!-- <main data-sector="" data-type="ContentElement" data-name="CONT" data-element="449"> -->
+        <div class="container-contactanos">
+            <h1>Contactanos</h1>
+            <form class="contactanosfrm" name="contactanosfrm" action="Contactanos" method="POST" id="contactanosfrm"
+                enctype="MULTIPART/FORM-DATA">
+                <input type="HIDDEN" name="parAction" value="A" id="idAction">
+                <div class="estructura">
+                    <div class="division">
+                        <label class="etiqueta">Nombre:</label>
+                        <input type="TEXT" name="name" class="texbox" size="30" maxlength="20" tabindex="1">
+                    </div><!--nombre-->
+
+                    <div class="division">
+                        <label class="etiqueta">Apellido:</label>
+                        <input type="TEXT" name="lastName" class="texbox" size="30"  maxlength="20" tabindex="2">
+                    </div><!--apellido-->
+                    <div class="division">
+                        <label class="etiqueta">Tipo de documento:</label>
+                        <select name="parTipoDoc" class="cbotipodoc selectAltura" tabindex="3">
+                            <option value="" disabled selected="selected">Seleccionar</option>
+                            <option data-name="DNI" value="1">DNI</option>
+                            <option data-name="C.U.I.L." value="2">CUIL</option>
+                            <option data-name="Pasaporte" value="3">Pasaporte</option>
+                        </select>
+                    </div><!--tipodocumento-->
+                    <div class="division">
+                        <label>Número de documento:</label>
+                        <input type="TEXT" name="docNumber" class="texbox" size="30" maxlength="20" tabindex="4">
+                    </div><!--nrodocumento-->
+                    <div class="division">
+                        <label>Email:</label>
+                        <input type="TEXT" name="email" class="texbox" size="30" maxlength="38" tabindex="5">
+                    </div><!--email-->
+                    <div class="division">
+                        <label>Teléfono de contacto:</label>
+                        <input type="TEXT" name="phone" class="texbox" size="30" maxlength="15" tabindex="6" text-transform: lowercase;>
+                    </div><!--telefono-->
+                    <div class="division">
+                        <label>Tipo de Atención:</label>
+                        <select name="atentionType" class="cbotipodoc selectAltura"  tabindex="7">
+                            <option value="" disabled selected="selected">Seleccionar</option>
+                            <option value="1" class="">Reclamos</option>
+                            <option value="2" class="">Solicitud</option>
+                            <option value="3" class="">Consulta</option>
+                            <option value="4" class="">Sugerencia</option>
+                        </select>
+                    </div><!--tipoatencion-->
+                    <div class="division-comment">
+                        <label>Comentarios:</label>
+                        <textarea name="comments" rows="6" cols="65" tabindex="8"></textarea>
+                    </div><!--comentarios-->
+                    <div class="division">
+                        <div class="boton">
+                            <button type="button" class="boton" aria-label="Close" data-bs-dismiss="modal" id="func">
+                                <span aria-hidden="true" class="button-primary" id="btn-guardar">Guardar</span>
+                            </button>
+                        </div><!--boton-->
+                    </div>
+                </div><!--estructura-->
+            </form><!--form-->
+
+        </div>
+        <!-- </main> -->
+    </section><!--formulario-->
+</body>
+<footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+
+            <div class="collogo">
+                <img src="ImgFooter/logo.png">
+                <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
+            </div><!--collogo-->
+
+            <div class="colinformacion">
+                <h1>Información</h1>
+                <ul type="none">
+                    <li><a href="index.html">Inicio</a> </li>
+                    <li><a href="">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="">Contáctenos</a></li>
+                </ul>
+            </div><!--colinformacion-->
+
+            <div class="colayuda">
+                <h1>Ayuda</h1>
+                <ul type="none">
+                    <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais"
+                            target="_blank" rel="noopener noreferrer">Documentación para su viaje</a></li>
+                    <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia"
+                            target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
+                    <li><a href="http://mascotas.senasa.gob.ar" target="_blank" rel="noopener noreferrer"> Traslado de
+                            Mascotas</a></li>
+                </ul>
+            </div><!--colayuda-->
+
+            <div class="colredes">
+                <h1>Redes</h1>
+                <table logos>
+                    <tr>
+                        <th><a href="https://wa.me/5491151136326?from=footer" target="_blank" rel="nofollow"><img
+                                    class="whatsapp" src="ImgFooter/WSPlogo.png"></a></th>
+                        <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img class="instagram"
+                                    src="ImgFooter/IGlogo.png"></a></th>
+                        <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook"
+                                    src="ImgFooter/FBlogo.png"></a></th>
+                    </tr>
+                </table>
+            </div><!--colredes-->
+
+        </div><!--container-body-->
+    </div><!--container-footer-all-->
+</footer><!--footer-->
+
+</html>
