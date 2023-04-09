@@ -4,52 +4,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrusel.css">
+    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
+    <link rel="stylesheet" href="CSS/carrusel.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="imagenCarussel/">
     <title>Carrusel</title>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="sliderContenedor">
+    <section> <!-- Barra de navegacion-->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="ImgFooter/logo.png" alt="logo de la pagina" /></a>
+                </div>
 
+                <ul class="links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Viajes</a></li>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+
+                <a href="#" class="action_btn">¡Reserve Ya!</a>
+
+                <!-- menuBar-->
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown_menu open">
+                <li><a href="home">Inicio</a></li>
+                <li><a href="about">Viajes</a></li>
+                <li><a href="services">Quiénes Somos</a></li>
+                <li><a href="contact">Contáctenos</a></li>
+                <li><a href="#" class="action_btn">¡Reserve Ya!</a></li>
+            </div>
+        </header>
+
+        <!-- .js para abrir el menu -->
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('Open')
+            }
+        </script>
+    </section>
+
+    <!-- Carrusel -->
+    <div class="contenedor">
+        <div class="sliderContenedor"> 
             <section class="contenidoSlider" id="tarjeta1">
+
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a> 
+                </div> 
+
                 <div>
                     <h2>Perú</h2>
                     <h3>Con paisajes tan variados como selvas, desierto y corrdilleras, <br> podras visitar lugares tan famosos como Machu-Picchu</h3>
                     <a id="info" href="#">¡Reserva Ya!</a>
                 </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
             </section>
-        
             <section class="contenidoSlider" id="tarjeta2">
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a> 
+                </div> 
+
                 <div>
                     <h2>Brasil</h2>
                     <h3>Hogar de las mejores playas del sur del continente <br> y del Cristo Redentor, maravilla del mundo</h3>
-                    <a id="info" href="#tarjeta1">¡Reserva Ya!</a>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
                 </div>
             </section>
-
             <section class="contenidoSlider" id="tarjeta3">
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a> 
+                </div> 
+
                 <div>
                     <h2>Chile</h2>
                     <h3>Nuestro destino mas austral. En el podras encontrar desiertos, bosque y glasiares, asi como visitar la fanosa <br> Isla de Pascua</h3>
-                    <a id="info" href="#tarjeta1">¡Reserva Ya!</a>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
                 </div>
             </section>
-        </div>
-
-        <section class="contenedorBotones">
-            <div class="botones">
-                <a href="#tarjeta1">1</a>
-                <a href="#tarjeta2">2</a>
-                <a href="#tarjeta3">3</a>
+            <div class="puntos">
+                <section class="punto active" onclick="posicionSlider(1)"></section>
+                <section class="punto" onclick="posicionSlider(2)"></section>
+                <section class="punto" onclick="posicionSlider(3)"></section>
             </div>
-        </section>
-
-        
-        <div class="direcciones">
-            <a id="atras" href="#" class="atras" onclick="avanzaSlider(-1)">&#10094</a>
-            <a id="adelante" href="#" class="adelante" onclick="avanzaSlider(1)">&#10095</a>
-        </div> 
+        </div>
     </div>
+    <script src="js/carrusel.js"></script> 
+
+    <section class="seccionDestinos">
+        <div class="destinos">
+            <ul class="listaDestinos">
+                <li><a href="#"></a>Brasil</li>
+                <li><a href="#"></a>Chile</li>
+                <li><a href="#"></a>Peru</li>
+            </ul>
+        </div>
+    </section>
+
 </body>
+<footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+
+            <div class="collogo">
+                <img src="ImgFooter/logo.png"> 
+                <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
+            </div><!--collogo-->
+
+            <div class="colinformacion">
+                <h1>Información</h1>
+                <ul type= "none">
+                    <li ><a href="index.html">Inicio</a> </li>
+                    <li><a href="">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="">Contáctenos</a></li>
+                </ul>
+            </div><!--colinformacion-->
+
+            <div class="colayuda">
+                <h1>Ayuda</h1>
+                <ul type= "none">
+                    <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais" target="_blank" rel="noopener noreferrer">Documentación para su viaje</a></li>
+                    <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia" target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
+                    <li><a href="http://mascotas.senasa.gob.ar"target="_blank" rel="noopener noreferrer"> Traslado de Mascotas</a></li>
+                </ul>         
+            </div><!--colayuda-->
+
+            <div class="colredes">
+                <h1>Redes</h1>
+                    <table logos>
+                    <tr>
+                        <th><a href="https://wa.me/5491151136326?from=footer" target="_blank" rel="nofollow"><img class="whatsapp" src="ImgFooter/WSPlogo.png"></a></th>
+                        <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img class="instagram" src="ImgFooter/IGlogo.png"></a></th>
+                        <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook" src="ImgFooter/FBlogo.png"></a></th>
+                    </tr>
+                    </table>
+            </div><!--colredes-->
+
+        </div><!--container-body-->
+    </div><!--container-footer-all-->
+</footer><!--footer-->
 </html>

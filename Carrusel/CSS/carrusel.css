@@ -22,7 +22,7 @@
 
 .contenidoSlider{
     width: 100%;
-    height: 500px;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -95,61 +95,66 @@
     width: 100%;
 }
 
-.direcciones{
-    position: absolute;
-    top: 30%;
+.anterior{
+    top: 0;
     display: flex;
     font-size: 20px;
+    align-items: center;
 }
 
-.direcciones a{
-    color: blue;
+.anterior a{
+    color: #D97925;
     display: inline-block;
     padding: 20px;
     text-decoration: none;
 }
 
-.direcciones a:hover{
-    background: rgba(255, 255, 255, 0.5);
+.anterior a:hover{
+    background: rgba(0, 0, 0, 0.5);
     transition: .5s;
 }
 
-#atras{
-    align-self: flex-start;
-}
-
-#adelante{
-    align-self: flex-end;
-}
-
-.contenedorBotones{
-    text-align: center;
-    margin: 1%;
-}
-.botones{
-    display: inline-flex;
-    text-align: center;
-    justify-content:space-around;
-
-}
-
-.botones >a{
-    
-    display: inline-block;
-    color: blue;
-    text-align: center;
-    text-decoration: none;
-    background-color: #D97925;
-    padding: 60%;
-    width: 50%;
-    height: 50%;
+.siguiente{
+    justify-content: end;
+    flex-direction: row-reverse;
+    top: 0;
+    display:flex;
     font-size: 20px;
-    border-radius: 100%;
-    cursor: pointer;
+    align-items: center;
 }
 
+.siguiente a{
+    color: #D97925;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+}
 
-.botones >a:hover{
-    background:rgba(217, 122, 38, 0.5);
+.siguiente a:hover{
+    background: rgba(1, 0, 0, 0.5);
     transition: .5s;
+}
+
+.puntos{
+    bottom: 30%;
+    position: absolute;
+    width: 98%;
+    justify-content: center;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.punto{
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 0 2px;
+    background: rgba(161, 53, 107, 0.5);
+    display: inline-block;
+    margin-left: 3px;
+    border-radius: 60%;
+}
+
+.active{
+    background-color: #d97925;
 }
