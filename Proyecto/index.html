@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/carrusel.css" />
+    <link rel="stylesheet" href="css/destinos.css" />
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <script src="js/carrusel.js"></script>
+    <title>Go! To Travel</title>
+</head>
+
+<body>
+    <nav> <!-- Barra de navegacion-->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                </div>
+
+                <ul class="links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#destinos">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="contactanos.html">Contáctenos</a></li>
+                </ul>
+
+                <!-- Comienza menu responsive-->
+                <div class="toggle_btn" alt="icono para abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- menu para desplegar -->
+            <div class="dropdown_menu open">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#destinos">Viajes</a></li>
+                <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                <li><a href="contactanos.html">Contáctenos</a></li>
+            </div>
+
+            <!-- .js para abrir el menu -->
+            <script>
+                const toggleBtn = document.querySelector('.toggle_btn')
+                const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                const dropDownMenu = document.querySelector('.dropdown_menu')
+
+                toggleBtn.onclick = function () {
+                    dropDownMenu.classList.toggle('open')
+                    const isOpen = dropDownMenu.classList.contains('Open')
+                }
+            </script>
+            <!-- termina menu responsive-->
+
+        </header>
+    </nav>
+
+    <!-- Carrusel -->
+    <div class="contenedor">
+        <div class="sliderContenedor">
+            <section class="contenidoSlider" id="tarjeta1">
+
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
+                </div>
+
+                <div>
+                    <h2>Perú</h2>
+                    <h3>Con paisajes tan variados como selvas, desierto y corrdilleras, <br> podras visitar lugares tan
+                        famosos como Machu-Picchu</h3>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
+            </section>
+            <section class="contenidoSlider" id="tarjeta2">
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
+                </div>
+
+                <div>
+                    <h2>Brasil</h2>
+                    <h3>Hogar de las mejores playas del sur del continente <br> y del Cristo Redentor, maravilla del
+                        mundo</h3>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
+            </section>
+            <section class="contenidoSlider" id="tarjeta3">
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
+                </div>
+
+                <div>
+                    <h2>Chile</h2>
+                    <h3>Nuestro destino mas austral. En el podras encontrar desiertos, bosque y glasiares, asi como
+                        visitar la fanosa <br> Isla de Pascua</h3>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
+            </section>
+            <div class="puntos">
+                <section class="punto active" onclick="posicionSlider(1)"></section>
+                <section class="punto" onclick="posicionSlider(2)"></section>
+                <section class="punto" onclick="posicionSlider(3)"></section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tarjetas de destinos abajo de carrusel-->
+        <section class="seccionDestinos">
+            <div class="preTitulo" id="destinos">DESTINOS</div>
+            <div class="titulo">PAQUETES MÁS POPULARES</div>
+        </section>   
+        <section class="cardDestinos">
+            <div class="imgCard brasil">
+                <div class="infoCard brasil">
+                    <h4 class="titleItem">Brasil</h4>
+                    <a class="btnItem" href="link/brasil.html">US$1,500.00 EL TEXTO ALARGA LA TARJETA jajaj</a>
+                </div>
+            </div>
+    
+            <div class="imgCard chile">
+                <div class="infoCard chile">
+                    <h4 class="titleItem">Chile</h4>
+                    <a class="btnItem" href="link/chile.html">US$1,500.00 EL TEXTO ALARGA LA TARJETA jajaj</a>
+                </div>
+            </div>
+    
+            <div class="imgCard peru">
+                <div class="infoCard peru">
+                    <h4 class="titleItem">Perú</h4>
+                    <a class="btnItem" href="link/peru.html">US$1,500.00 EL TEXTO ALARGA LA TARJETA jajaj</a>
+                </div>
+            </div>
+        </section>
+</body>
+
+<footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+
+            <div class="collogo">
+                <img src="img/footer/logo.png">
+                <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
+            </div><!--collogo-->
+
+            <div class="colinformacion">
+                <h1>Información</h1>
+                <ul type="none">
+                    <li><a href="index.html">Inicio</a> </li>
+                    <li><a href="">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="">Contáctenos</a></li>
+                </ul>
+            </div><!--colinformacion-->
+
+            <div class="colayuda">
+                <h1>Ayuda</h1>
+                <ul type="none">
+                    <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais"
+                            target="_blank" rel="noopener noreferrer">Documentación para su viaje</a></li>
+                    <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia"
+                            target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
+                    <li><a href="http://mascotas.senasa.gob.ar" target="_blank" rel="noopener noreferrer"> Traslado
+                            de Mascotas</a></li>
+                </ul>
+            </div><!--colayuda-->
+
+            <div class="colredes">
+                <h1>Redes</h1>
+                <table logos>
+                    <tr>
+                        <th><a href="https://wa.me/5491151136326?from=footer" target="_blank" rel="nofollow"><img
+                                    class="whatsapp" src="img/footer/WSPlogo.png"></a></th>
+                        <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img class="instagram"
+                                    src="img/footer/IGlogo.png"></a></th>
+                        <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook"
+                                    src="img/footer/FBlogo.png"></a></th>
+                    </tr>
+                </table>
+            </div><!--colredes-->
+
+        </div><!--container-body-->
+    </div><!--container-footer-all-->
+</footer><!--footer-->
+
+</html>
