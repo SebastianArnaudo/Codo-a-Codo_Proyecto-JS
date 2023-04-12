@@ -70,7 +70,7 @@
 }
 
 #tarjeta1{
-    background:url(Proyecto\img\Machu-Picchu.jpg);
+    background:url();
     background-position: 50%;
     background-size: cover;
     display: flex;
@@ -79,7 +79,7 @@
 }
 
 #tarjeta2{
-    background: url(Proyecto\img\Playa.jpg);
+    background: url();
     background-position: 50%;
     background-size: cover;
     display: flex;
@@ -88,7 +88,7 @@
 }
 
 #tarjeta3{
-    background:url(Proyecto\Java\Proyecto\img\Pascua.jpg);
+    background:url();
     background-position: 50%;
     background-size: cover;
     display: flex;
