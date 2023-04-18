@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/carrusel.css" />
     <link rel="stylesheet" href="css/destinos.css" />
+    <link rel="stylesheet" href="css/destinosV2.css" />
     <link rel="stylesheet" href="css/cards.css">
     <link rel="shortcut icon" href="img/favicon.ico" />
     <script src="js/carrusel.js"></script>
@@ -123,33 +124,169 @@
         </div>
     </div>
 
-    <!-- Tarjetas de destinos abajo de carrusel-->
-        <section class="seccionDestinos">
-            <div class="preTitulo" id="destinos">DESTINOS</div>
-            <div class="titulo">PAQUETES MÁS POPULARES</div>
-        </section>   
-        <section class="cardDestinos">
-            <div class="imgCard brasil">
-                <div class="infoCard brasil">
-                    <h4 class="titleItem">Brasil</h4>
-                    <a class="btnItem" href="link/brasil.html">US$1,500.00 EL TEXTO ALARGA LA TARJETA jajaj</a>
+
+    <!-- Paquetes populares bajo el carrusel-->
+    <section class="seccionDestinos">
+        <div class="preTitulo" id="destinos">DESTINOS</div>
+        <div class="titulo">PAQUETES MÁS POPULARES</div>
+    </section>
+
+    <!-- Comienzan paquetes-->
+    <section class="paq-cards">
+        <section class="paq-cards-contenedor">
+
+            <!-- Paquete 1: Rio de Janeiro-->
+            <div class="paq-card-contenedor brasil">
+                <img src="img/2-rio (1).jpg" alt="brasil">
+                <div class="paq-card-info">
+
+                    <div class="paq-card-contenido">
+                        <div class="paq-card-detalle-info">
+                            <h3>Rio de Janeiro</h3>
+
+                            <!-- vuelo-->
+                            <div class="paq-card-detallado">
+                                <span class="vuelo-contenido">
+                                    <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                    <em>Vuelo directo</em>
+                                    <span class="codigos-vuelo">
+                                        <em class="codigo-partida">BUE</em>
+                                        <em class="icono-flechas"><i
+                                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                        <em class="codigo-arribo">GIG</em>
+                                    </span>
+                                </span>
+
+                                <!-- hotel-->
+                                <span class="paq-card-hotel-contenedor">
+                                    <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                    <span class="hotel-contenido">
+                                        <span class="hotel-nombre">Hotel Praia do Pontal</span>
+                                        <span class="hotel-estrellas">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+                                </span>
+
+                                <!-- precio-->
+                                <div class="paq-card-precio-contenedor">
+                                    <div class="precio-persona">Precio por persona</div>
+                                    <div class="precio-contenido">
+                                        <span class="precio-antes">$247.300</span>
+                                        <span class="precio-ahora">$246.149</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-    
-            <div class="imgCard chile">
-                <div class="infoCard chile">
-                    <h4 class="titleItem">Chile</h4>
-                    <a class="btnItem" href="link/chile.html">US$1,500.00 EL TEXTO ALARGA LA TARJETA jajaj</a>
+
+            <!-- Paquete 2: Isla de Pascua-->
+            <div class="paq-card-contenedor chile">
+                <img src="img/1-moai (1).jpg" alt="chile">
+                <div class="paq-card-info">
+
+                    <div class="paq-card-contenido">
+                        <div class="paq-card-detalle-info">
+                            <h3>Isla de Pascua</h3>
+
+                            <!-- vuelo-->
+                            <div class="paq-card-detallado">
+                                <span class="vuelo-contenido">
+                                    <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                    <em>Vuelo con escalas</em>
+                                    <span class="codigos-vuelo">
+                                        <em class="codigo-partida">BUE</em>
+                                        <em class="icono-flechas"><i
+                                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                        <em class="codigo-arribo">IPC</em>
+                                    </span>
+                                </span>
+
+                                <!-- hotel-->
+                                <span class="paq-card-hotel-contenedor">
+                                    <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                    <span class="hotel-contenido">
+                                        <span class="hotel-nombre">Hotel Hare Nua</span>
+                                        <span class="hotel-estrellas">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+                                </span>
+
+                                <!-- precio-->
+                                <div class="paq-card-precio-contenedor">
+                                    <div class="precio-persona">Precio por persona</div>
+                                    <div class="precio-contenido">
+                                        <span class="precio-antes">1.947.343</span>
+                                        <span class="precio-ahora">$1.897.149</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-    
-            <div class="imgCard peru">
-                <div class="infoCard peru">
-                    <h4 class="titleItem">Perú</h4>
-                    <a class="btnItem" href="link/peru.html">US$1,500.00 EL TEXTO ALARGA LA TARJETA jajaj</a>
+
+            <!-- Paquete 3: Machu Picchu-->
+            <div class="paq-card-contenedor peru">
+                <img src="img/3-picchu (1).jpg" alt="peru">
+                <div class="paq-card-info">
+
+                    <div class="paq-card-contenido">
+                        <div class="paq-card-detalle-info">
+                            <h3>Machu Picchu</h3>
+
+                            <!-- vuelo-->
+                            <div class="paq-card-detallado">
+                                <span class="vuelo-contenido">
+                                    <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                    <em>Vuelo con escalas</em>
+                                    <span class="codigos-vuelo">
+                                        <em class="codigo-partida">BUE</em>
+                                        <em class="icono-flechas"><i
+                                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                        <em class="codigo-arribo">CUZ</em>
+                                    </span>
+                                </span>
+
+                                <!-- hotel-->
+                                <span class="paq-card-hotel-contenedor">
+                                    <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                    <span class="hotel-contenido">
+                                        <span class="hotel-nombre">Antigua Casona San Blas</span>
+                                        <span class="hotel-estrellas">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+                                </span>
+
+                                <!-- precio-->
+                                <div class="paq-card-precio-contenedor">
+                                    <div class="precio-persona">Precio por persona</div>
+                                    <div class="precio-contenido">
+                                        <span class="precio-antes">$365.970</span>
+                                        <span class="precio-ahora">$362.278</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </section>
+    </section> <!-- Terminanpaquetes-->
+
 </body>
 
 <footer>
