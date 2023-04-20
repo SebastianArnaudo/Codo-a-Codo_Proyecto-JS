@@ -9,7 +9,7 @@ function posicionSlider(n){
     muestraSlides(indice=n);
 }
 
-setInterval(function tiempo() {
+setInterval(function tiempo(){
     muestraSlides(indice+=1)
 }, 10000);
 
@@ -21,7 +21,7 @@ function muestraSlides(n){
     if(n > slides.length){
         indice = 1;
     }else if(n < 1){
-        indice = slides.length();
+        indice = slides.length;
     }
 
     for(i = 0; i < slides.length; i++){
@@ -34,5 +34,6 @@ function muestraSlides(n){
 
     slides[indice-1].style.display = "flex";
     puntos[indice-1].className += " active";
+
 }
 
