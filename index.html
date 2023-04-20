@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/carrusel.css" />
+    <link rel="stylesheet" href="css/destinos.css" />
+    <link rel="stylesheet" href="css/destinosV2.css" />
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <script src="js/carrusel.js"></script>
+    <title>Go! To Travel</title>
+</head>
+
+<body>
+    <header> <!-- Barra de navegacion-->
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
+            </div>
+
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#destinos">Viajes</a></li>
+                <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                <li><a href="contactanos.html">Contáctenos</a></li>
+            </ul>
+
+            <!-- Comienza menu responsive-->
+            <div class="toggle_btn" alt="icono para abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- menu para desplegar -->
+        <div class="dropdown_menu open">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#destinos">Viajes</a></li>
+            <li><a href="quienessomos.html">Quiénes Somos</a></li>
+            <li><a href="contactanos.html">Contáctenos</a></li>
+        </div>
+
+        <!-- .js para abrir el menu -->
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('Open')
+            }
+        </script>
+        <!-- termina menu responsive-->
+
+    </header>
+
+    <!-- Carrusel -->
+    <div class="contenedor">
+        <div class="sliderContenedor">
+            <section class="contenidoSlider" id="tarjeta1">
+
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
+                </div>
+
+                <div>
+                    <h2>Perú</h2>
+                    <h3>Con paisajes tan variados como selvas, desierto y corrdilleras, <br> podras visitar lugares tan
+                        famosos como Machu-Picchu</h3>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
+            </section>
+            <section class="contenidoSlider" id="tarjeta2">
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
+                </div>
+
+                <div>
+                    <h2>Brasil</h2>
+                    <h3>Hogar de las mejores playas del sur del continente <br> y del Cristo Redentor, maravilla del
+                        mundo</h3>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
+            </section>
+            <section class="contenidoSlider" id="tarjeta3">
+                <div class="anterior">
+                    <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
+                </div>
+
+                <div>
+                    <h2>Chile</h2>
+                    <h3>Nuestro destino mas austral. En el podras encontrar desiertos, bosque y glasiares, asi como
+                        visitar la fanosa <br> Isla de Pascua</h3>
+                    <a id="info" href="#">¡Reserva Ya!</a>
+                </div>
+
+                <div class="siguiente">
+                    <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
+                </div>
+            </section>
+        </div>
+        <div class="puntos">
+            <section class="punto active" onclick="posicionSlider(1)"></section>
+            <section class="punto" onclick="posicionSlider(2)"></section>
+            <section class="punto" onclick="posicionSlider(3)"></section>
+        </div>
+    </div>
+
+
+    <!-- Paquetes populares bajo el carrusel-->
+    <section class="seccionDestinos">
+        <div class="preTitulo" id="destinos">DESTINOS</div>
+        <div class="titulo">PAQUETES MÁS POPULARES</div>
+    </section>
+
+    <!-- Comienzan paquetes-->
+    <section class="paq-cards">
+        <section class="paq-cards-contenedor">
+
+            <!-- Paquete 1: Rio de Janeiro-->
+            <div class="paq-card-contenedor brasil">
+                <a href="brasil.html">
+                    <img src="img/2-rio (1).jpg" alt="brasil">
+                    <div class="paq-card-info">
+
+                        <div class="paq-card-contenido">
+                            <div class="paq-card-detalle-info">
+                                <h3>Rio de Janeiro</h3>
+
+                                <!-- vuelo-->
+                                <div class="paq-card-detallado">
+                                    <span class="vuelo-contenido">
+                                        <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                        <em>Vuelo directo</em>
+                                        <span class="codigos-vuelo">
+                                            <em class="codigo-partida">BUE</em>
+                                            <em class="icono-flechas"><i
+                                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                            <em class="codigo-arribo">GIG</em>
+                                        </span>
+                                    </span>
+
+                                    <!-- hotel-->
+                                    <span class="paq-card-hotel-contenedor">
+                                        <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                        <span class="hotel-contenido">
+                                            <span class="hotel-nombre">Hotel Praia do Pontal</span>
+                                            <span class="hotel-estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <!-- precio-->
+                                    <div class="paq-card-precio-contenedor">
+                                        <div class="precio-persona">Precio por persona</div>
+                                        <div class="precio-contenido">
+                                            <span class="precio-antes">$247.300</span>
+                                            <span class="precio-ahora">$246.149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Paquete 2: Isla de Pascua-->
+            <div class="paq-card-contenedor chile">
+                <a href="chile.html">
+                    <img src="img/1-moai (1).jpg" alt="chile">
+                    <div class="paq-card-info">
+
+                        <div class="paq-card-contenido">
+                            <div class="paq-card-detalle-info">
+                                <h3>Isla de Pascua</h3>
+
+                                <!-- vuelo-->
+                                <div class="paq-card-detallado">
+                                    <span class="vuelo-contenido">
+                                        <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                        <em>Vuelo con escalas</em>
+                                        <span class="codigos-vuelo">
+                                            <em class="codigo-partida">BUE</em>
+                                            <em class="icono-flechas"><i
+                                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                            <em class="codigo-arribo">IPC</em>
+                                        </span>
+                                    </span>
+
+                                    <!-- hotel-->
+                                    <span class="paq-card-hotel-contenedor">
+                                        <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                        <span class="hotel-contenido">
+                                            <span class="hotel-nombre">Hotel Hare Nua</span>
+                                            <span class="hotel-estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <!-- precio-->
+                                    <div class="paq-card-precio-contenedor">
+                                        <div class="precio-persona">Precio por persona</div>
+                                        <div class="precio-contenido">
+                                            <span class="precio-antes">1.947.343</span>
+                                            <span class="precio-ahora">$1.897.149</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Paquete 3: Machu Picchu-->
+            <div class="paq-card-contenedor peru">
+                <a href="peru.html">
+                    <img src="img/3-picchu (1).jpg" alt="peru">
+                    <div class="paq-card-info">
+
+                        <div class="paq-card-contenido">
+                            <div class="paq-card-detalle-info">
+                                <h3>Machu Picchu</h3>
+
+                                <!-- vuelo-->
+                                <div class="paq-card-detallado">
+                                    <span class="vuelo-contenido">
+                                        <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                        <em>Vuelo con escalas</em>
+                                        <span class="codigos-vuelo">
+                                            <em class="codigo-partida">BUE</em>
+                                            <em class="icono-flechas"><i
+                                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                            <em class="codigo-arribo">CUZ</em>
+                                        </span>
+                                    </span>
+
+                                    <!-- hotel-->
+                                    <span class="paq-card-hotel-contenedor">
+                                        <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                        <span class="hotel-contenido">
+                                            <span class="hotel-nombre">Antigua Casona San Blas</span>
+                                            <span class="hotel-estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <!-- precio-->
+                                    <div class="paq-card-precio-contenedor">
+                                        <div class="precio-persona">Precio por persona</div>
+                                        <div class="precio-contenido">
+                                            <span class="precio-antes">$365.970</span>
+                                            <span class="precio-ahora">$362.278</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+    </section> <!-- Terminanpaquetes-->
+
+</body>
+
+<footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+
+            <div class="collogo">
+                <img src="img/logo.png">
+                <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
+            </div><!--collogo-->
+
+            <div class="colinformacion">
+                <h1>Información</h1>
+                <ul type="none">
+                    <li><a href="index.html">Inicio</a> </li>
+                    <li><a href="">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="">Contáctenos</a></li>
+                </ul>
+            </div><!--colinformacion-->
+
+            <div class="colayuda">
+                <h1>Ayuda</h1>
+                <ul type="none">
+                    <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais"
+                            target="_blank" rel="noopener noreferrer">Documentación para su viaje</a></li>
+                    <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia"
+                            target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
+                    <li><a href="http://mascotas.senasa.gob.ar" target="_blank" rel="noopener noreferrer"> Traslado
+                            de Mascotas</a></li>
+                </ul>
+            </div><!--colayuda-->
+
+            <div class="colredes">
+                <h1>Redes</h1>
+                <table logos>
+                    <tr>
+                        <th><a href="https://wa.me/5491151136326?from=footer" target="_blank" rel="nofollow"><img
+                                    class="whatsapp" src="img/WSPlogo.png"></a></th>
+                        <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img class="instagram"
+                                    src="img/IGlogo.png"></a></th>
+                        <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook"
+                                    src="img/FBlogo.png"></a></th>
+                    </tr>
+                </table>
+            </div><!--colredes-->
+
+        </div><!--container-body-->
+    </div><!--container-footer-all-->
+</footer><!--footer-->
+
+</html>

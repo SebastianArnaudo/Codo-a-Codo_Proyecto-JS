@@ -1,0 +1,41 @@
+.formulario{
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+.container-contactanos{ 
+    margin-top: 1em;
+}
+.container-contactanos h1{ 
+    font-size: 2rem;
+    color: #d97925;
+    text-align:center;
+}
+.contactanosfrm{
+    justify-content: center;
+    display: flex;
+}
+.contactanosfrm label{
+    display:inline-table;
+    width:200px;
+    height: auto;
+    text-align: left;
+    margin-top: 0.2em;
+}
+ 
+.contactanosfrm textarea{
+    max-lines: 1000;
+    resize: vertical;
+    display:inline-table;
+    margin-top: 0.2em;
+}
+.contactanosfrm button{
+    float:right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+ 
+.selectAltura {
+    width:230px;
+  }
+  
