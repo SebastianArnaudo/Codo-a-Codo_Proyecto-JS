@@ -1,0 +1,173 @@
+/*titulo paquetes*/
+
+.seccionDestinos {
+    display: block;
+    margin-top: 1.5em;
+    border-top: 1px solid #e5e5e5;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.95em;
+    padding-bottom: .95em;
+}
+
+.preTitulo {
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    color: #9c9999;
+}
+
+.titulo {
+    font-size: 1.85em;
+    font-weight: bold;
+}
+
+
+/*tarjetas paquetes*/
+.paq-cards {
+    margin: 1em 15em 4em 15em;
+}
+
+.paq-cards a {
+    color: #343A3D;
+}
+
+.paq-cards-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 28px;
+    grid-auto-rows: auto;
+}
+
+.paq-card-contenedor {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    box-shadow: 10px 10px 25px -8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.paq-card-contenedor:hover {
+    transform: scale(1.01);
+}
+
+.paq-card-contenedor img {
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.paq-card-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #DDE1E8;
+}
+
+.paq-card-contenido {
+    position: relative;
+    flex-grow: 1;
+    padding: 16px 20px 12px;
+}
+
+.paq-card-detalle-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.paq-card-detalle-info h3 {
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.paq-card-detallado {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 12px;
+    color: #343A3D;
+}
+
+.vuelo-contenido {
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+.codigos-vuelo {
+    display: flex;
+    align-items: center;
+}
+
+.icono-vuelo {
+    padding-right: 8px;
+}
+
+.codigo-partida {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.codigo-arribo {
+    padding-left: 4px;
+}
+
+.icono-flechas {
+    position: relative;
+    width: 16px;
+    display: inline-block;
+}
+
+.paq-card-hotel-contenedor {
+    align-items: flex-start;
+}
+
+.hotel-icono {
+    padding-right: 8px;
+}
+
+.hotel-contenido {
+    display: inline-flex;
+    align-items: center;
+}
+
+.hotel-estrellas {
+    padding-left: 8px;
+    color: #fa8e04;
+}
+
+.paq-card-precio-contenedor {
+    border-top: 1px solid #dde1e8;
+    margin-top: 1em;
+    padding: 1em 0 1em .3em;
+}
+
+.precio-persona {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.precio-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.precio-antes {
+    line-height: 1em;
+    font-weight: 400;
+    margin-left: 4px;
+    color: #767e89;
+    text-decoration: line-through;
+}
+
+.precio-ahora {
+    font-size: 24px;
+    font-weight: 300;
+}
