@@ -70,7 +70,9 @@
 }
 
 #tarjeta1{
-    background:url(Proyecto\img\Machu-Picchu.jpg);
+    /*background:url(Proyecto\img\Machu-Picchu.jpg);*/
+    background: url(https://lh3.googleusercontent.com/p/AF1QipMeFI6xEXkscxX0MN-cjTXjmRHZQb4rpc4VdJlY=s1360-w1360-h1020);
+   
     background-position: 50%;
     background-size: cover;
     display: flex;
@@ -79,7 +81,9 @@
 }
 
 #tarjeta2{
-    background: url(Proyecto\img\Playa.jpg);
+    /*background: url(Proyecto\img\Playa.jpg);*/
+    background: url(https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/lospmgcpmhbm6yarejh1);
+    
     background-position: 50%;
     background-size: cover;
     display: flex;
@@ -88,7 +92,9 @@
 }
 
 #tarjeta3{
-    background:url(Proyecto\Java\Proyecto\img\Pascua.jpg);
+    /*background:url(Proyecto\Java\Proyecto\img\Pascua.jpg);*/
+    background:url(https://www.gochile.cl/fotos/full/107581-isla-de-pascua_shutterstock_77085319-mqzeyqe98hksyx54mvedrrfprxp1z7w6zmubuzodkg.jpg);
+    
     background-position: 50%;
     background-size: cover;
     display: flex;
