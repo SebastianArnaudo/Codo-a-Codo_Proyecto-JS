@@ -20,49 +20,47 @@
 </head>
 
 <body>
-    <nav> <!-- Barra de navegacion-->
-        <header>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="#"><img src="img/logo.png" alt="logo de la pagina" /></a>
-                </div>
-
-                <ul class="links">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#destinos">Viajes</a></li>
-                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                    <li><a href="contactanos.html">Contáctenos</a></li>
-                </ul>
-
-                <!-- Comienza menu responsive-->
-                <div class="toggle_btn" alt="icono para abrir menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+    <header> <!-- Barra de navegacion-->
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
             </div>
 
-            <!-- menu para desplegar -->
-            <div class="dropdown_menu open">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#destinos">Viajes</a></li>
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#destinos">Viajes</a></li>
                 <li><a href="quienessomos.html">Quiénes Somos</a></li>
                 <li><a href="contactanos.html">Contáctenos</a></li>
+            </ul>
+
+            <!-- Comienza menu responsive-->
+            <div class="toggle_btn" alt="icono para abrir menu">
+                <i class="fa-solid fa-bars"></i>
             </div>
+        </div>
 
-            <!-- .js para abrir el menu -->
-            <script>
-                const toggleBtn = document.querySelector('.toggle_btn')
-                const toggleBtnIcon = document.querySelector('.toggle_btn i')
-                const dropDownMenu = document.querySelector('.dropdown_menu')
+        <!-- menu para desplegar -->
+        <div class="dropdown_menu open">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#destinos">Viajes</a></li>
+            <li><a href="quienessomos.html">Quiénes Somos</a></li>
+            <li><a href="contactanos.html">Contáctenos</a></li>
+        </div>
 
-                toggleBtn.onclick = function () {
-                    dropDownMenu.classList.toggle('open')
-                    const isOpen = dropDownMenu.classList.contains('Open')
-                }
-            </script>
-            <!-- termina menu responsive-->
+        <!-- .js para abrir el menu -->
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
 
-        </header>
-    </nav>
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('Open')
+            }
+        </script>
+        <!-- termina menu responsive-->
+
+    </header>
 
     <!-- Carrusel -->
     <div class="contenedor">
@@ -137,151 +135,157 @@
 
             <!-- Paquete 1: Rio de Janeiro-->
             <div class="paq-card-contenedor brasil">
-                <img src="img/2-rio (1).jpg" alt="brasil">
-                <div class="paq-card-info">
+                <a href="link/brasil.html">
+                    <img src="img/2-rio (1).jpg" alt="brasil">
+                    <div class="paq-card-info">
 
-                    <div class="paq-card-contenido">
-                        <div class="paq-card-detalle-info">
-                            <h3>Rio de Janeiro</h3>
+                        <div class="paq-card-contenido">
+                            <div class="paq-card-detalle-info">
+                                <h3>Rio de Janeiro</h3>
 
-                            <!-- vuelo-->
-                            <div class="paq-card-detallado">
-                                <span class="vuelo-contenido">
-                                    <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
-                                    <em>Vuelo directo</em>
-                                    <span class="codigos-vuelo">
-                                        <em class="codigo-partida">BUE</em>
-                                        <em class="icono-flechas"><i
-                                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
-                                        <em class="codigo-arribo">GIG</em>
-                                    </span>
-                                </span>
-
-                                <!-- hotel-->
-                                <span class="paq-card-hotel-contenedor">
-                                    <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
-                                    <span class="hotel-contenido">
-                                        <span class="hotel-nombre">Hotel Praia do Pontal</span>
-                                        <span class="hotel-estrellas">
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                <!-- vuelo-->
+                                <div class="paq-card-detallado">
+                                    <span class="vuelo-contenido">
+                                        <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                        <em>Vuelo directo</em>
+                                        <span class="codigos-vuelo">
+                                            <em class="codigo-partida">BUE</em>
+                                            <em class="icono-flechas"><i
+                                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                            <em class="codigo-arribo">GIG</em>
                                         </span>
                                     </span>
-                                </span>
 
-                                <!-- precio-->
-                                <div class="paq-card-precio-contenedor">
-                                    <div class="precio-persona">Precio por persona</div>
-                                    <div class="precio-contenido">
-                                        <span class="precio-antes">$247.300</span>
-                                        <span class="precio-ahora">$246.149</span>
+                                    <!-- hotel-->
+                                    <span class="paq-card-hotel-contenedor">
+                                        <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                        <span class="hotel-contenido">
+                                            <span class="hotel-nombre">Hotel Praia do Pontal</span>
+                                            <span class="hotel-estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <!-- precio-->
+                                    <div class="paq-card-precio-contenedor">
+                                        <div class="precio-persona">Precio por persona</div>
+                                        <div class="precio-contenido">
+                                            <span class="precio-antes">$247.300</span>
+                                            <span class="precio-ahora">$246.149</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Paquete 2: Isla de Pascua-->
             <div class="paq-card-contenedor chile">
-                <img src="img/1-moai (1).jpg" alt="chile">
-                <div class="paq-card-info">
+                <a href="link/chile.html">
+                    <img src="img/1-moai (1).jpg" alt="chile">
+                    <div class="paq-card-info">
 
-                    <div class="paq-card-contenido">
-                        <div class="paq-card-detalle-info">
-                            <h3>Isla de Pascua</h3>
+                        <div class="paq-card-contenido">
+                            <div class="paq-card-detalle-info">
+                                <h3>Isla de Pascua</h3>
 
-                            <!-- vuelo-->
-                            <div class="paq-card-detallado">
-                                <span class="vuelo-contenido">
-                                    <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
-                                    <em>Vuelo con escalas</em>
-                                    <span class="codigos-vuelo">
-                                        <em class="codigo-partida">BUE</em>
-                                        <em class="icono-flechas"><i
-                                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
-                                        <em class="codigo-arribo">IPC</em>
-                                    </span>
-                                </span>
-
-                                <!-- hotel-->
-                                <span class="paq-card-hotel-contenedor">
-                                    <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
-                                    <span class="hotel-contenido">
-                                        <span class="hotel-nombre">Hotel Hare Nua</span>
-                                        <span class="hotel-estrellas">
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                <!-- vuelo-->
+                                <div class="paq-card-detallado">
+                                    <span class="vuelo-contenido">
+                                        <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                        <em>Vuelo con escalas</em>
+                                        <span class="codigos-vuelo">
+                                            <em class="codigo-partida">BUE</em>
+                                            <em class="icono-flechas"><i
+                                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                            <em class="codigo-arribo">IPC</em>
                                         </span>
                                     </span>
-                                </span>
 
-                                <!-- precio-->
-                                <div class="paq-card-precio-contenedor">
-                                    <div class="precio-persona">Precio por persona</div>
-                                    <div class="precio-contenido">
-                                        <span class="precio-antes">1.947.343</span>
-                                        <span class="precio-ahora">$1.897.149</span>
+                                    <!-- hotel-->
+                                    <span class="paq-card-hotel-contenedor">
+                                        <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                        <span class="hotel-contenido">
+                                            <span class="hotel-nombre">Hotel Hare Nua</span>
+                                            <span class="hotel-estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <!-- precio-->
+                                    <div class="paq-card-precio-contenedor">
+                                        <div class="precio-persona">Precio por persona</div>
+                                        <div class="precio-contenido">
+                                            <span class="precio-antes">1.947.343</span>
+                                            <span class="precio-ahora">$1.897.149</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Paquete 3: Machu Picchu-->
             <div class="paq-card-contenedor peru">
-                <img src="img/3-picchu (1).jpg" alt="peru">
-                <div class="paq-card-info">
+                <a href="link/peru.html">
+                    <img src="img/3-picchu (1).jpg" alt="peru">
+                    <div class="paq-card-info">
 
-                    <div class="paq-card-contenido">
-                        <div class="paq-card-detalle-info">
-                            <h3>Machu Picchu</h3>
+                        <div class="paq-card-contenido">
+                            <div class="paq-card-detalle-info">
+                                <h3>Machu Picchu</h3>
 
-                            <!-- vuelo-->
-                            <div class="paq-card-detallado">
-                                <span class="vuelo-contenido">
-                                    <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
-                                    <em>Vuelo con escalas</em>
-                                    <span class="codigos-vuelo">
-                                        <em class="codigo-partida">BUE</em>
-                                        <em class="icono-flechas"><i
-                                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
-                                        <em class="codigo-arribo">CUZ</em>
-                                    </span>
-                                </span>
-
-                                <!-- hotel-->
-                                <span class="paq-card-hotel-contenedor">
-                                    <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
-                                    <span class="hotel-contenido">
-                                        <span class="hotel-nombre">Antigua Casona San Blas</span>
-                                        <span class="hotel-estrellas">
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                <!-- vuelo-->
+                                <div class="paq-card-detallado">
+                                    <span class="vuelo-contenido">
+                                        <em class="icono-vuelo"><i class="fa-sharp fa-solid fa-plane"></i></em>
+                                        <em>Vuelo con escalas</em>
+                                        <span class="codigos-vuelo">
+                                            <em class="codigo-partida">BUE</em>
+                                            <em class="icono-flechas"><i
+                                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></em>
+                                            <em class="codigo-arribo">CUZ</em>
                                         </span>
                                     </span>
-                                </span>
 
-                                <!-- precio-->
-                                <div class="paq-card-precio-contenedor">
-                                    <div class="precio-persona">Precio por persona</div>
-                                    <div class="precio-contenido">
-                                        <span class="precio-antes">$365.970</span>
-                                        <span class="precio-ahora">$362.278</span>
+                                    <!-- hotel-->
+                                    <span class="paq-card-hotel-contenedor">
+                                        <em class="hotel-icono"><i class="fa-solid fa-bed"></i></em>
+                                        <span class="hotel-contenido">
+                                            <span class="hotel-nombre">Antigua Casona San Blas</span>
+                                            <span class="hotel-estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <!-- precio-->
+                                    <div class="paq-card-precio-contenedor">
+                                        <div class="precio-persona">Precio por persona</div>
+                                        <div class="precio-contenido">
+                                            <span class="precio-antes">$365.970</span>
+                                            <span class="precio-ahora">$362.278</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
         </section>

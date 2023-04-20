@@ -3,7 +3,7 @@
 .seccionDestinos {
     display: block;
     margin-top: 1.5em;
-    border-top: 1px solid #e5e5e5 !important;
+    border-top: 1px solid #e5e5e5;
     margin-left: auto;
     margin-right: auto;
     padding-top: 0.95em;
@@ -26,7 +26,10 @@
 /*tarjetas paquetes*/
 .paq-cards {
     margin: 1em 15em 4em 15em;
-    
+}
+
+.paq-cards a {
+    color: #343A3D;
 }
 
 .paq-cards-contenedor {
