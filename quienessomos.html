@@ -11,41 +11,40 @@
         <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="css/carrusel.css" />
         <link rel="stylesheet" href="css/destinos.css" />
+        <link rel="stylesheet" href="css/destinosV2.css" />
+        <link rel="stylesheet" href="css/cards.css">
         <link rel="shortcut icon" href="img/favicon.ico" />
+        <script src="js/carrusel.js"></script>
         <title>Go! To Travel</title>
     </head>
 <body>
-    <nav> <!-- Barra de navegacion-->
-        <header>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="#"><img src="img/logo.png" alt="logo de la pagina" /></a>
-                </div>
 
-                <ul class="links">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Viajes</a></li>
-                    <li><a href="#">Quiénes Somos</a></li>
-                    <li><a href="#">Contáctenos</a></li>
-                </ul>
-
-                <!-- <a href="#" class="action_btn">¡Reserve Ya!</a> -->
-
-                <!-- menuBar-->
-                <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+    <header> <!-- Barra de navegacion-->
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
             </div>
 
-            <!-- DROPDOWN -->
-            <div class="dropdown_menu open">
-                <li><a href="home">Inicio</a></li>
-                <li><a href="about">Viajes</a></li>
-                <li><a href="services">Quiénes Somos</a></li>
-                <li><a href="contact">Contáctenos</a></li>
-                <!-- <li><a href="#" class="action_btn">¡Reserve Ya!</a></li> -->
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#destinos">Viajes</a></li>
+                <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                <li><a href="contactanos.html">Contáctenos</a></li>
+            </ul>
+
+            <!-- Comienza menu responsive-->
+            <div class="toggle_btn" alt="icono para abrir menu">
+                <i class="fa-solid fa-bars"></i>
             </div>
-        </header>
+        </div>
+
+        <!-- menu para desplegar -->
+        <div class="dropdown_menu open">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#destinos">Viajes</a></li>
+            <li><a href="quienessomos.html">Quiénes Somos</a></li>
+            <li><a href="contactanos.html">Contáctenos</a></li>
+        </div>
 
         <!-- .js para abrir el menu -->
         <script>
@@ -58,11 +57,12 @@
                 const isOpen = dropDownMenu.classList.contains('Open')
             }
         </script>
-    </nav>
-    
+        <!-- termina menu responsive-->
+
+    </header>
     <section> <!-- Barra de navegacion-->
     <div class="contenedor-quienessomos">
-        <img src="/ImgFooter/jisoo-kim-7DgXbusG1C4-unsplash.jpg"/>
+        <img src="img/jisoo-kim-7DgXbusG1C4-unsplash.jpg"/>
         <div class="texto-quienessomos">
             <p><b>Go Travel</b> es una empresa de viajes ubicada en Buenos Aires, C. 
                 <br>Ofrecemos paquetes de viaje a precios asequibles.
@@ -76,19 +76,19 @@
 <footer>
     <div class="container-footer-all">
         <div class="container-body">
-    
+
             <div class="collogo">
-                <img src="ImgFooter/logo.png">
+                <img src="img/logo.png">
                 <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
             </div><!--collogo-->
-    
+
             <div class="colinformacion">
                 <h1>Información</h1>
                 <ul type="none">
-                    <li><a href="index.html">Inicio</a> </li>
-                    <li><a href="">Viajes</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#destinos">Viajes</a></li>
                     <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                    <li><a href="">Contáctenos</a></li>
+                    <li><a href="contactanos.html">Contáctenos</a></li>
                 </ul>
             </div><!--colinformacion-->
     
@@ -109,11 +109,11 @@
                 <table logos>
                     <tr>
                         <th><a href="https://wa.me/5491151136326?from=footer" target="_blank" rel="nofollow"><img
-                                    class="whatsapp" src="ImgFooter/WSPlogo.png"></a></th>
+                                    class="whatsapp" src="img/WSPlogo.png"></a></th>
                         <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img class="instagram"
-                                    src="ImgFooter/IGlogo.png"></a></th>
+                                    src="img/IGlogo.png"></a></th>
                         <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook"
-                                    src="ImgFooter/FBlogo.png"></a></th>
+                                    src="img/FBlogo.png"></a></th>
                     </tr>
                 </table>
             </div><!--colredes-->
