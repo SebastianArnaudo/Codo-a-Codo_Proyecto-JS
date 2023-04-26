@@ -1,10 +1,32 @@
-.formulario{
-    width: 100%; 
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
-.container-contactanos{ 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+.formulario{
+    width: 100%; 
     margin-top: 1em;
+    justify-content: center;
+    display: flex;
+    width: 1200px;
+     
+}
+
+.container-contactanos{ 
+    margin-top: 3em;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 .container-contactanos h1{ 
     font-size: 2rem;
@@ -15,27 +37,36 @@
     justify-content: center;
     display: flex;
 }
-.contactanosfrm label{
+.contactanosfrm etiqueta{
     display:inline-table;
-    width:200px;
     height: auto;
     text-align: left;
-    margin-top: 0.2em;
+    margin-top:1em;
+    font-weight: bold;
+    float: left;
 }
  
 .contactanosfrm textarea{
     max-lines: 1000;
     resize: vertical;
     display:inline-table;
-    margin-top: 0.2em;
+    margin-top: 1em;
+    width: 250px;
+    height: 150px
 }
 .contactanosfrm button{
     float:right;
     margin-top: 1em;
     margin-bottom: 1em;
+    margin-left: 255px;
 }
  
 .selectAltura {
-    width:230px;
+    width:300px;
   }
-  
+
+     
+     
+   
+     
+   

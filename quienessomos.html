@@ -9,70 +9,51 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/footer.css" />
         <link rel="stylesheet" href="css/navbar.css" />
-        <link rel="stylesheet" href="css/carrusel.css" />
-        <link rel="stylesheet" href="css/destinos.css" />
-        <link rel="stylesheet" href="css/destinosV2.css" />
-        <link rel="stylesheet" href="css/cards.css">
+        <link rel="stylesheet" href="css/quienessomos.css"/>
         <link rel="shortcut icon" href="img/favicon.ico" />
-        <script src="js/carrusel.js"></script>
         <title>Go! To Travel</title>
     </head>
 <body>
+    <div class = "contenedor"> <!-- Barra de navegacion-->
+        <header> <!-- Barra de navegacion-->
+            <div class="navbar">
+                <div class="logo">
+                   <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                </div>
 
-    <header> <!-- Barra de navegacion-->
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#destinos">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="contactanos.html">Contáctenos</a></li>
+                </ul>
+
+                <!-- Comienza menu responsive-->
+                <div class="toggle_btn" alt="icono para abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
 
-            <ul class="links">
+            <!-- menu para desplegar -->
+            <div class="dropdown_menu open">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#destinos">Viajes</a></li>
                 <li><a href="quienessomos.html">Quiénes Somos</a></li>
                 <li><a href="contactanos.html">Contáctenos</a></li>
-            </ul>
+            </div>
+        </header>
 
-            <!-- Comienza menu responsive-->
-            <div class="toggle_btn" alt="icono para abrir menu">
-                <i class="fa-solid fa-bars"></i>
+        <div class="contenedor-quienessomos">
+            <img src="img/jisoo-kim-7DgXbusG1C4-unsplash.jpg"/>
+            <div class="texto-quienessomos">
+                <p><b>Go Travel</b>, es una reconocida empresa de viajes ubicada en Buenos Aires, C. 
+                    <br>Ofrecemos paquetes de viaje a precios asequibles.
+                    <br>Nuestros servicios incluyen hoteles, vuelos, transporte, guías turísticos y excursiones. 
+                    <br>¡Veni a <b>Go Travel</b> para tu próxima aventura!
+                </p>
             </div>
         </div>
-
-        <!-- menu para desplegar -->
-        <div class="dropdown_menu open">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#destinos">Viajes</a></li>
-            <li><a href="quienessomos.html">Quiénes Somos</a></li>
-            <li><a href="contactanos.html">Contáctenos</a></li>
-        </div>
-
-        <!-- .js para abrir el menu -->
-        <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
-
-            toggleBtn.onclick = function () {
-                dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('Open')
-            }
-        </script>
-        <!-- termina menu responsive-->
-
-    </header>
-    <section> <!-- Barra de navegacion-->
-    <div class="contenedor-quienessomos">
-        <img src="img/jisoo-kim-7DgXbusG1C4-unsplash.jpg"/>
-        <div class="texto-quienessomos">
-            <p><b>Go Travel</b> es una empresa de viajes ubicada en Buenos Aires, C. 
-                <br>Ofrecemos paquetes de viaje a precios asequibles.
-                <br>Nuestros servicios incluyen hoteles, vuelos, transporte, guías turísticos y excursiones. 
-                <br>¡Veni a <b>Go Travel</b> para tu próxima aventura!
-            </p>
-        </div>
-      </div>
-    </section>
-</body>
+    </div>
 <footer>
     <div class="container-footer-all">
         <div class="container-body">
@@ -121,5 +102,7 @@
         </div><!--container-body-->
     </div><!--container-footer-all-->
 </footer><!--footer-->
+</body>
+
 
 </html>
