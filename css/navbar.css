@@ -15,9 +15,7 @@ a:hover {
 
 .navbar {
     width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 3.75em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,6 +28,7 @@ a:hover {
 .navbar .logo img {
     width: 4rem;
     position: relative;
+    padding-top: 6px;
 }
 
 .navbar .logo img:hover{
@@ -39,6 +38,7 @@ a:hover {
 .navbar .links {
     display: flex;
     gap: 2rem;
+    margin: 0 auto
 }
 
 .navbar .toggle_btn {
@@ -81,16 +81,13 @@ a:hover {
 
 /* Define tamaño de navbar segun pantalla (Responsiveness) */
 @media(max-width: 992px) {
-
     .navbar .links,
-    .navbar {
+    .header {
         display: none;
     }
-
     .navbar .toggle_btn {
         display: block;
     }
-
     .dropdown_menu {
         display: block;
     }
@@ -101,4 +98,4 @@ a:hover {
         left: 2rem;
         width: unset;
     }
-}
+} 
