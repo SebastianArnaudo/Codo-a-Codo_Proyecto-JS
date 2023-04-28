@@ -24,4 +24,9 @@ header {
     background-color: #0A3B59;
     left: 0;
     right: 0;
+    z-index: 1;
+}
+
+html {
+    height: 100%;
 }
