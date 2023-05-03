@@ -6,67 +6,91 @@
     scroll-behavior: smooth;
 }
 body {
+    font-family: 'Poppins', sans-serif;
+      /* min-height: 100vh;  
+    display: flex;*/
+    align-items: center;
+    justify-content: center; 
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    height: 138vh;
     min-height: 100%;
     background-color: #fff;
+
 }
 
-.formulario{
-    width: 100%; 
-    margin-top: 1em;
-    justify-content: center;
-    display: flex;
-    width: 1200px;
-     
-}
-
-.container-contactanos{ 
+form{
     margin-top: 3em;
-    position: relative;
-    display: inline-block;
+    padding: 20px 25px;  
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    border-radius:20px;
     text-align: center;
+    width: 600px;
+     
 }
-.container-contactanos h1{ 
-    font-size: 2rem;
-    color: #d97925;
-    text-align:center;
-}
-.contactanosfrm{
-    justify-content: center;
-    display: flex;
-}
-.contactanosfrm etiqueta{
-    display:inline-table;
-    height: auto;
-    text-align: left;
-    margin-top:1em;
-    font-weight: bold;
-    float: left;
-}
- 
-.contactanosfrm textarea{
-    max-lines: 1000;
-    resize: vertical;
-    display:inline-table;
-    margin-top: 1em;
-    width: 250px;
-    height: 150px
-}
-.contactanosfrm button{
-    float:right;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 255px;
-}
- 
-.selectAltura {
-    width:300px;
-  }
 
-     
-     
-   
-     
-   
+.input-group{
+ display: flex;
+ flex-direction: column;
+ text-align: left;
+}
+
+h2{
+    color: #d97925;
+     font-size: 35px;
+}
+label{
+color: #283629 ;
+font-size: 15px;
+font-weight: 600;
+margin-bottom: 5px;
+}
+input,textarea{
+    padding: 10px 20px;
+    border-radius: 25px;    
+    margin-bottom: 10px;
+    background-color: #edfff0;
+    border: 2px solid #f0faf1;
+    color: #283629;
+    outline: none;
+}
+
+input::placeholder,text::placeholder{
+    color: #b5cab6  ;
+}
+
+.form-txt{
+  margin-bottom: 10px;  
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.form-txt a{
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn{
+    font-size: 16px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #51d94c;
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
+    cursor: pointer;
+}
+.btn:hover{
+    padding: 20px;
+}
+@media(max-width:992px){
+    body{
+        padding: 10px;
+    }
+    form{
+        padding: 30px 20px;
+        width: 100%;
+    }
+    input{
+        padding: 10px;
+    }
+}

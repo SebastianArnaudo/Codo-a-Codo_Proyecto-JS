@@ -45,74 +45,31 @@
             </div>
         </header>
 
-        <div class="formulario">
-            <!-- <main data-sector="" data-type="ContentElement" data-name="CONT" data-element="449"> -->
-            <div class="container-contactanos">
-                <h1>Contactanos</h1>
-                <form class="contactanosfrm" name="contactanosfrm" action="Contactanos" method="POST"
-                    id="contactanosfrm" enctype="MULTIPART/FORM-DATA">
-                    <input type="HIDDEN" name="parAction" value="A" id="idAction">
-                    <div class="estructura">
-                        <div class="division">
-                            <label class="etiqueta">Nombre:</label>
-                            <input type="TEXT" name="name" class="texbox" size="30" maxlength="20" tabindex="1">
-                        </div><!--nombre-->
+        <form action="https://formsubmit.co/rivasperezjob@gmail.com" method="POST">
+        <h2>Contáctanos</h2>
+        <div class="input-group">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre">
 
-                        <div class="division">
-                            <label class="etiqueta">Apellido:</label>
-                            <input type="TEXT" name="lastName" class="texbox" size="30" maxlength="20" tabindex="2">
-                        </div><!--apellido-->
-                        <div class="division">
-                            <label class="etiqueta">Tipo de documento:</label>
-                            <select name="parTipoDoc" class="cbotipodoc selectAltura" tabindex="3">
-                                <option value="" disabled selected="selected">Seleccionar</option>
-                                <option data-name="DNI" value="1">DNI</option>
-                                <option data-name="C.U.I.L." value="2">CUIL</option>
-                                <option data-name="Pasaporte" value="3">Pasaporte</option>
-                            </select>
-                        </div><!--tipodocumento-->
-                        <div class="division">
-                            <label>Número de documento:</label>
-                            <input type="TEXT" name="docNumber" class="texbox" size="30" maxlength="20" tabindex="4">
-                        </div><!--nrodocumento-->
-                        <div class="division">
-                            <label>Email:</label>
-                            <input type="TEXT" name="email" class="texbox" size="30" maxlength="38" tabindex="5">
-                        </div><!--email-->
-                        <div class="division">
-                            <label>Teléfono de contacto:</label>
-                            <input type="TEXT" name="phone" class="texbox" size="30" maxlength="15" tabindex="6"
-                                text-transform: lowercase;>
-                        </div><!--telefono-->
-                        <div class="division">
-                            <label>Tipo de Atención:</label>
-                            <select name="atentionType" class="cbotipodoc selectAltura" tabindex="7">
-                                <option value="" disabled selected="selected">Seleccionar</option>
-                                <option value="1" class="">Reclamos</option>
-                                <option value="2" class="">Solicitud</option>
-                                <option value="3" class="">Consulta</option>
-                                <option value="4" class="">Sugerencia</option>
-                            </select>
-                        </div><!--tipoatencion-->
-                        <div class="division-comment">
-                            <label>Comentarios:</label>
-                            <textarea name="comments" rows="6" cols="65" tabindex="8"></textarea>
-                        </div><!--comentarios-->
-                        <div class="division">
-                            <div class="boton">
-                                <button type="button" class="boton" aria-label="Close" data-bs-dismiss="modal"
-                                    id="func">
-                                    <span aria-hidden="true" class="button-primary" id="btn-guardar">Guardar</span>
-                                </button>
-                            </div><!--boton-->
-                        </div>
-                    </div><!--estructura-->
-                </form><!--form-->
+            <label for="lastname">Apellido</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Apellido">
 
-            </div>
-            <!-- </main> -->
-        </div><!--formulario-->
-    </div><!--Contenedor-->
+            <label for="dni">DNI</label>
+            <input type="number" name="dni" id="dni" placeholder="DNI">
+
+            <label for="phone">Telefono</label>
+            <input type="tel" name="phone" id="phone" placeholder="Telefono">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+
+            <input class="btn" type="submit" value = "Enviar">
+        </div>
+    </form>
+</div> <!--contenedor-->
     <footer>
         <div class="container-footer-all">
             <div class="container-body">
@@ -162,7 +119,11 @@
             </div><!--container-body-->
         </div><!--container-footer-all-->
     </footer><!--footer-->
+
+
 </body>
-
-
 </html>
+
+
+
+
