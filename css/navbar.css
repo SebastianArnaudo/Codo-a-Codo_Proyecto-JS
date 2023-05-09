@@ -80,7 +80,7 @@ a:hover {
 }
 
 /* Define tamaño de navbar segun pantalla (Responsiveness) */
-@media(max-width: 992px) {
+@media(max-width: 810px) {
     .navbar .links,
     .header {
         display: none;

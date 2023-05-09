@@ -18,6 +18,10 @@ body {
     background-color: #fff;
 }
 
+.contenedor-general{
+    overflow: scroll;
+}
+
 header {
     position: fixed;
     padding: 0 2rem;
@@ -30,3 +34,63 @@ header {
 html {
     height: 100%;
 }
+
+
+/* Responsive moviles */
+@media screen and (max-width: 414px) {
+    .contenidoSlider .anterior {
+        width: 5px;
+        margin-right: 2em;
+    }
+
+    .contenidoSlider .siguiente {
+        width: 5px;
+        margin-left: 2em;
+    }
+
+    .contenidoSlider .informacion {
+        width: 100%;
+        color: green; 
+    }
+}
+
+/* Responsive tablets */
+@media screen and (min-width: 415px) and (max-width: 810px) {
+    .contenidoSlider .anterior {
+        width: 5px;
+        margin: 0;
+    }
+
+    .contenidoSlider .siguiente {
+        width: 5px;
+        margin: 0;
+    }
+
+    .contenidoSlider .informacion {
+        margin: 0 3em 0 3em;
+        padding: 0 4em 0 4em;
+        width: 100%;
+        color: red;
+    }
+}
+
+/* Define tamaño de navbar segun pantalla (Responsiveness) */
+@media(max-width: 810px) {
+    .navbar .links,
+    .header {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+} 
