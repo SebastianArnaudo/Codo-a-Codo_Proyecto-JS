@@ -2,93 +2,179 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
+	background: #E5E5E5;
     align-items: center;
     justify-content: center; 
     display: flex;
-    height: 138vh;
-    min-height: 100%;
-    background-color: #fff;
-
+    /* margin-top: 0; */
+    /* height: 138vh; */
+    /* min-height: 100%; */
 }
 
-form{
-    margin-top: 3em;
-    padding: 20px 25px;  
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
-    border-radius:20px;
-    text-align: center;
-    width: 600px;
-     
+.contenedorfrm {
+	max-width: 600px;
+	width: 90%;
+	margin: auto;
+	padding: 55px;
 }
-
-.input-group{
- display: flex;
- flex-direction: column;
- text-align: left;
-}
-
 h2{
+	top: 3em;
     color: #d97925;
-     font-size: 35px;
-}
-label{
-color: #283629 ;
-font-size: 15px;
-font-weight: 600;
-margin-bottom: 5px;
-}
-input,textarea{
-    padding: 10px 20px;
-    border-radius: 25px;    
-    margin-bottom: 10px;
-    background-color: #edfff0;
-    border: 2px solid #f0faf1;
-    color: #283629;
-    outline: none;
+     font-size: 30px;
+     text-align: center;
 }
 
-input::placeholder,text::placeholder{
-    color: #b5cab6  ;
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+    width: 700px;
 }
 
-.form-txt{
-  margin-bottom: 10px;  
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+.frmetiqueta {
+	display: block;
+	font-weight: 400;
+	padding: 10px;
+	cursor: pointer;
 }
-.form-txt a{
-    color: #76b28e;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
+
+.frmginput {
+	position: relative;
 }
-.btn{
-    font-size: 16px;
-    color: #ffffff;
-    border: 0;
-    border-radius: 25px;
+
+.frminput {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.frminput:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.frminput-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.frminput-error-activo {
+	display: block;
+}
+
+.frmval-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+
+.frm-msg,
+.frmgrupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.frm-msg {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.frm-msg-activo {
+	display: block;
+}
+
+.frm-msg p {
+	margin: 0;
+}
+
+.frmgrupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.frmbtn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
     background-color: #51d94c;
     box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
-    cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+    
 }
-.btn:hover{
-    padding: 20px;
+
+.frmbtn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
-@media(max-width:992px){
-    body{
-        padding: 10px;
-    }
-    form{
-        padding: 30px 20px;
-        width: 100%;
-    }
-    input{
-        padding: 10px;
-    }
+
+.frm-msg-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.frm-msg-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.frmgrupo-correcto .frmval-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.frmgrupo-incorrecto .frmetiqueta {
+	color: #bb2929;
+}
+
+.frmgrupo-incorrecto .frmval-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.frmgrupo-incorrecto .frminput {
+	border: 3px solid #bb2929;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+      .formulario {
+        /* padding: 30px 20px; */
+        /* width: 100%; */
+		grid-template-columns: 1fr;
+	}
+
+	.frmmensaje,
+	.frmgrupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.frmbtn {
+		width: 100%;
+	}
 }

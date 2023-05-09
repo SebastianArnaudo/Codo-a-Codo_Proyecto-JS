@@ -3,15 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formulario con Javascript</title>
+    <!-- <link rel="stylesheet" href="css/estilos.css">  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/navbar.css" /> 
-    <link rel="stylesheet" href="css/contactanos.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+     <link rel="stylesheet" href="css/contactanos.css" />
     <link rel="shortcut icon" href="img/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <title>Go! To Travel</title>
 </head>
 
@@ -44,32 +48,93 @@
                 <li><a href="contactanos.html">Contáctenos</a></li>
             </div>
         </header>
+    </div> <!--contenedor-->
 
-    <form action="https://formsubmit.co/rivasperezjob@gmail.com" method="POST">
-        <h2>contacto</h2>
-        <div class="input-group">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
+    <div class="contenedorfrm" id="contenedorfrm"></div>
+        <h2>Contactanos</h2>
+        
+        <form action="https://formsubmit.co/gotravelproyectocodoacodo@gmail.com" method="POST">
+        <div class="formulario" id="formulario">
+                <!-- Nombre -->
+                <div class="frmgrupo" id="grupo__nombre">
+                    <label for="nombre" class="frmetiqueta">Nombre</label>
+                    <div class="frmginput">
+                        <input type="text" class="frminput" name="nombre" id="nombre" maxlength="20">
+                        <i class="frmval-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="frminput-error">El nombre tiene que ser de 4 a 20 dígitos y solo puede contener letras.</p>
+                </div>
 
-            <label for="lastname">Apellido</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Apellido">
+                <!--  Apellido -->
+                <div class="frmgrupo" id="grupo__apellido">
+                    <label for="apellido" class="frmetiqueta">Apellido</label>
+                    <div class="frmginput">
+                        <input type="text" class="frminput" name="apellido" id="apellido" maxlength="20">
+                        <i class="frmval-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="frminput-error">El apellido tiene que ser de 4 a 20 dígitos y solo puede contener numeros
+                        letras.</p>
+                </div>
 
-            <label for="dni">DNI</label>
-            <input type="number" name="dni" id="dni" placeholder="DNI">
+                <!-- DNI-->
+                <div class="frmgrupo" id="grupo__dni">
+                    <label for="dni" class="frmetiqueta">DNI</label>
+                    <div class="frmginput">
+                        <input type="text" class="frminput" name="dni" id="dni" maxlength="8">
+                        <i class="frmval-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="frminput-error">El DNI solo puede contener numeros y el máximo son 8 dígitos.</p>
+                </div>
 
-            <label for="phone">Telefono</label>
-            <input type="tel" name="phone" id="phone" placeholder="Telefono">
+                <!-- Teléfono -->
+                <div class="frmgrupo" id="grupo__telefono">
+                    <label for="telefono" class="frmetiqueta">Teléfono</label>
+                    <div class="frmginput">
+                        <input type="text" class="frminput" name="telefono" id="telefono">
+                        <i class="frmval-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="frminput-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+                <!-- Email -->
+                <div class="frmgrupo" id="grupo__correo">
+                    <label for="correo" class="frmetiqueta">Email</label>
+                    <div class="frmginput">
+                        <input type="text" class="frminput" name="correo" id="correo">
+                        <i class="frmval-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="frminput-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
+                    </p>
+                </div>
 
-            <label for="message">Mensaje</label>
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                <!-- Comentario -->
+                <div class="frmgrupo" id="grupo__comentario">
+                    <label for="comentario" class="frmetiqueta">Comentario</label>
+                    <div class="frmginput">
+                        <textarea type="text" name="comentario" class="frminput" id="comentario" cols="30"
+                            rows="5"></textarea>
+                        <i class="frmval-estado fas fa-times-circle"></i>
+                    </div>
 
-            <input class="btn" type="submit" value = "Enviar">
-        </div>
+                </div>
+
+                <div class="frm-msg" id="frm-msg">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                        correctamente. </p>
+                </div>
+                <div class="frmgrupo frmgrupo-btn-enviar">
+                    <button type="submit" class="frmbtn">Enviar</button>
+                    <p class="frm-msg-exito" id="frm-msg-exito">Formulario enviado exitosamente!</p>
+
+                </div>
+
+        </div>    <!--formulario-->
     </form>
-</div> <!--contenedor-->
+    <script src="js/formulario.js"></script>
+    </div> <!--contenedorfrm-->
+
+
+
     <footer>
         <div class="container-footer-all">
             <div class="container-body">
@@ -122,8 +187,5 @@
 
 
 </body>
+
 </html>
-
-
-
-
