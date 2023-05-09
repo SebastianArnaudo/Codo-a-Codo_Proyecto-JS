@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/carrusel.css" />
     <link rel="stylesheet" href="css/destinos.css" />
     <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="shortcut icon" href="img/favicon.ico" />
     <script src="js/carrusel.js"></script>
     <title>Go! To Travel</title>
@@ -62,25 +63,40 @@
             <!-- termina menu responsive-->
 
         </header>
+        <!-- VENTANA MODAL -->
+        <div class="modalContenedor">
+            <!-- ocupa y "bloquea" la pantalla entera con un background opaco -->
+            <div class="modal" id="modal"> 
+                <!-- contiene el mensaje y el cierre-->
+                <div class="modalContenido" id="modalContenido">
+                    <h1>Disclaimer<h1>
+                    <p>La siguiente página fue realizada con fines formativos. <br>
+                        La empresa y los productos expuestos no existen.
+                    </p>
+                    <button class="closeButton" id="closeButton">Okey!</button>
+                </div>
+            </div>
+            <script src="js/modalIndex.js"></script>
+        </div>
 
         <!-- Carrusel -->
-        <div class="contenedor">
-            <div class="sliderContenedor">
-                <section class="contenidoSlider" id="tarjeta1">
+        <div class="contenedor"> <!-- slider y puntos -->
+            <div class="sliderContenedor"> <!-- slider -->
+                <section class="contenidoSlider" id="tarjeta1"> <!-- secciones a mostrar -->
 
-                    <div class="anterior">
+                    <div class="anterior"> <!-- control de movilad -->
                         <a href="#" class="atras" onclick="avanzaSlider(-1)">&#10094;</a>
                     </div>
 
-                    <div class="informacion">
+                    <div class="informacion"> <!-- datos de destino -->
                         <h2>Perú</h2>
                         <h3>Con paisajes tan variados como selvas, desierto y corrdilleras. <br> Podras visitar lugares
                             tan
                             famosos como Machu-Picchu</h3>
-                        <a id="info" href="#">¡Reserva Ya!</a>
+                        <a id="info" href="#">¡Reserva Ya!</a> <!-- acceso a la reservacion -->
                     </div>
 
-                    <div class="siguiente">
+                    <div class="siguiente"> <!-- control de movilad -->
                         <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
                     </div>
                 </section>
@@ -115,14 +131,14 @@
                     <div class="siguiente">
                         <a href="#" class="adelante" onclick="avanzaSlider(1)">&#10095;</a>
                     </div>
-                </section>
+                </section> <!-- fin slider -->
             </div>
-            <div class="puntos">
+            <div class="puntos"> <!-- marcador de posicion/control de movilidad -->
                 <section class="punto active" onclick="posicionSlider(1)"></section>
                 <section class="punto" onclick="posicionSlider(2)"></section>
                 <section class="punto" onclick="posicionSlider(3)"></section>
             </div>
-        </div>
+        </div> <!-- fin slider y puntos -->
 
 
         <!-- Paquetes populares bajo el carrusel-->
@@ -132,7 +148,7 @@
         </section>
 
         <!-- Comienzan paquetes-->
-       
+
             <section class="paq-cards-contenedor">
 
                 <!-- Paquete 1: Rio de Janeiro-->
@@ -291,7 +307,7 @@
                 </div>
 
             </section>
-         <!-- Terminanpaquetes-->
+        <!-- Terminanpaquetes -->
 
         <footer>
             <div class="container-footer-all">

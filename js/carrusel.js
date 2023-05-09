@@ -1,17 +1,20 @@
-let indice = 1;
+/*Creamos un índice de posición y una función que lo muestra */
+let indice = 1; //Le damos al indice un valor respecto a la cantidad de “tarjetas” disponibles
 muestraSlides(indice);
 
-function avanzaSlider(n){
-    muestraSlides(indice+=n);
+/*Funciones de  movimiento*/
+function avanzaSlider(n){  
+    muestraSlides(indice+=n);  //Al sumar (o restar según el caso) al valor del índice, este representará otra tarjeta   
 }
 
-function posicionSlider(n){
-    muestraSlides(indice=n);
+function posicionSlider(n){   
+    muestraSlides(indice=n);  //Aquí le decimos simplemente que adquiera el valor de una tarjeta en específico
 }
 
+/*Función principal*/
 function muestraSlides(n){
     let i;
-    let slides = document.getElementsByClassName("contenidoSlider");
+    let slides = document.getElementsByClassName("contenidoSlider"); 
     let puntos = document.getElementsByClassName("punto");
 
     if(n > slides.length){
