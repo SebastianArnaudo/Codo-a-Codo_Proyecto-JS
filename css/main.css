@@ -71,24 +71,3 @@ html {
         width: 100%;
     }
 }
-
-/* Define tamaño de navbar segun pantalla (Responsiveness) */
-@media(max-width: 810px) {
-    .navbar .links,
-    .header {
-        display: none;
-    }
-    .navbar .toggle_btn {
-        display: block;
-    }
-    .dropdown_menu {
-        display: block;
-    }
-}
-
-@media (max-width: 576px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-} 
