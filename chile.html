@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/link.css">
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="shortcut icon" href="img/favicon.ico" />
 
     <title>Chile</title>
@@ -16,29 +18,47 @@
     <main>
 
 
-        <!-- INICIO CÓDIGO NAV -->
+        <header> <!-- Barra de navegacion-->
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                </div>
 
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#titulo">Viajes</a></li>
+                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
+                    <li><a href="contactanos.html">Contáctenos</a></li>
+                </ul>
+
+                <!-- Comienza menu responsive-->
+                <div class="toggle_btn" alt="icono para abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
 
-            <ul class="links">
+            <!-- menu para desplegar -->
+            <div class="dropdown_menu open">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html">Viajes</a></li>
+                <li><a href="index.html#titulo">Viajes</a></li>
                 <li><a href="quienessomos.html">Quiénes Somos</a></li>
                 <li><a href="contactanos.html">Contáctenos</a></li>
-            </ul>
-
-            <a href="#" class="action_btn">¡Reserve Ya!</a>
-
-            <!-- menuBar-->
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
 
-        <!-- FIN CÓDIGO NAV -->
+            <!-- .js para abrir el menu -->
+            <script>
+                const toggleBtn = document.querySelector('.toggle_btn')
+                const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                const dropDownMenu = document.querySelector('.dropdown_menu')
+
+                toggleBtn.onclick = function () {
+                    dropDownMenu.classList.toggle('open')
+                    const isOpen = dropDownMenu.classList.contains('Open')
+                }
+            </script>
+            <!-- termina menu responsive-->
+
+        </header>
 
 
         <header>

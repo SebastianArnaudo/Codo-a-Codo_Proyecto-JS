@@ -19,6 +19,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #0A3B59;
 }
 
 .navbar .links li:hover{
