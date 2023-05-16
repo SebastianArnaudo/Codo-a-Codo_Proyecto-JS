@@ -1,23 +1,17 @@
 * {
-    margin: 0;
-    padding: 0;
+	padding: 0;
+	margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
 	background: #E5E5E5;
-    align-items: center;
-    justify-content: center; 
-    display: flex;
-    /* margin-top: 0; */
-    /* height: 138vh; */
-    /* min-height: 100%; */
 }
 
 .contenedorfrm {
-	max-width: 600px;
+	max-width: 55%;
 	width: 90%;
 	margin: auto;
 	padding: 55px;
@@ -26,8 +20,8 @@ body {
 h2{
 	top: 3em;
     color: #d97925;
-     font-size: 30px;
-     text-align: center;
+    font-size: 30px;
+    text-align: center;
 }
 
 .formulario {
@@ -164,9 +158,7 @@ h2{
 
 /* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
-      .formulario {
-        /* padding: 30px 20px; */
-        /* width: 100%; */
+    .formulario {
 		grid-template-columns: 1fr;
 	}
 
