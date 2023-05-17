@@ -48,23 +48,6 @@
     line-height: 30px;
 }
 
-.contenidoSlider  #info{
-    color: white;
-    background-color: #D97925;
-    width: 100px;
-    display: block;
-    padding: 15px 0;
-    text-align: center;
-    margin-top: 20px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#info:hover{
-    background: rgba(217, 122, 38, 0.5);
-    transition: .5s;
-}
-
 #Texto{
     width: 40%;
 }
