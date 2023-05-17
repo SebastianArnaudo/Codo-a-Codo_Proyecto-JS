@@ -47,20 +47,6 @@
                 <li><a href="quienessomos.html">Quiénes Somos</a></li>
                 <li><a href="contactanos.html">Contáctenos</a></li>
             </div>
-
-            <!-- .js para abrir el menu -->
-            <script>
-                const toggleBtn = document.querySelector('.toggle_btn')
-                const toggleBtnIcon = document.querySelector('.toggle_btn i')
-                const dropDownMenu = document.querySelector('.dropdown_menu')
-
-                toggleBtn.onclick = function () {
-                    dropDownMenu.classList.toggle('open')
-                    const isOpen = dropDownMenu.classList.contains('Open')
-                }
-            </script>
-            <!-- termina menu responsive-->
-
         </header>
         
         <!-- VENTANA MODAL -->
@@ -360,5 +346,7 @@
         </footer><!--footer-->
     </div>
 </body>
+
+<script src="js/navbar.js"></script> <!-- Se llama luego del body, soluciona TypeError onclick-->
 
 </html>
