@@ -8,60 +8,22 @@
     <link rel="stylesheet" href="css/link.css">
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
     <link rel="shortcut icon" href="img/favicon.ico" />
-    
-
-    <title>Perú</title>
+    <title>Brasil</title>
 </head>
 
 <body>
 
     <main>
-        <header> <!-- Barra de navegacion-->
-            <div class="navbar">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
-                </div>
+        <header> <!-- Barra de navegacion--></header>
 
-                <ul class="links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#titulo">Viajes</a></li>
-                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                    <li><a href="contactanos.html">Contáctenos</a></li>
-                </ul>
-
-                <!-- Comienza menu responsive-->
-                <div class="toggle_btn" alt="icono para abrir menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-
-            <!-- menu para desplegar -->
-            <div class="dropdown_menu open">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#titulo">Viajes</a></li>
-                <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                <li><a href="contactanos.html">Contáctenos</a></li>
-            </div>
-
-            <!-- .js para abrir el menu -->
-            <script>
-                const toggleBtn = document.querySelector('.toggle_btn')
-                const toggleBtnIcon = document.querySelector('.toggle_btn i')
-                const dropDownMenu = document.querySelector('.dropdown_menu')
-
-                toggleBtn.onclick = function () {
-                    dropDownMenu.classList.toggle('open')
-                    const isOpen = dropDownMenu.classList.contains('Open')
-                }
-            </script>
-            <!-- termina menu responsive-->
-
-        </header>
-
-        <header>
+        <div>
             <h2 class="h2-paquete">Perú - Paquetes turisticos</h2>
-        </header>
+        </div>
         <!--PAQUETE A PERÚ# 1-->
 
         <div class="paquetes">
@@ -188,7 +150,7 @@
 
     <!--FIN CÓDIGO FOOTER-->
 
-
+    <script src="js/navbar.js"></script> <!-- barra de navegacion. Se llama luego del body, soluciona TypeError onclick-->
 </body>
 
 </html>
