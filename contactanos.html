@@ -21,33 +21,7 @@
 
 <body>
     <div class="contenedor"> <!-- Barra de navegacion-->
-        <header> <!-- Barra de navegacion-->
-            <div class="navbar">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="logo de la pagina" /></a>
-                </div>
-
-                <ul class="links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#destinos">Viajes</a></li>
-                    <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                    <li><a href="contactanos.html">Contáctenos</a></li>
-                </ul>
-
-                <!-- Comienza menu responsive-->
-                <div class="toggle_btn" alt="icono para abrir menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-
-            <!-- menu para desplegar -->
-            <div class="dropdown_menu open">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#destinos">Viajes</a></li>
-                <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                <li><a href="contactanos.html">Contáctenos</a></li>
-            </div>
-        </header>
+        <header> <!-- Barra de navegacion--> </header>
     </div> <!--contenedor-->
 
     <div class="contenedorfrm" id="contenedorfrm">
@@ -186,6 +160,7 @@
     </footer><!--footer-->
 
 
+    <script src="js/navbar.js"></script> <!-- barra de navegacion. Se llama luego del body, soluciona TypeError onclick-->
 </body>
-<script src="js/navbar.js"></script> <!-- Se llama luego del body, soluciona TypeError onclick-->
+
 </html>
