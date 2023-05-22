@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
 }
 
 body {
@@ -22,6 +24,11 @@ body {
     overflow: scroll;
 }
 
+.contenedor-general::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+  }
+
 header {
     position: fixed;
     padding: 0 2rem;
@@ -30,11 +37,6 @@ header {
     right: 0;
     z-index: 1;
 }
-
-html {
-    height: 100%;
-}
-
 
 /* Responsive moviles */
 @media screen and (max-width: 414px) {
