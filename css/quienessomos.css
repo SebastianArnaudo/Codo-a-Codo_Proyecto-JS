@@ -1,26 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-body {
+
+.contenedor {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    min-height: 100%;
-    background-color: #fff;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
-.contenedor-quienessomos img{
-   background-image: none;
+.contenedor img {
     display: flex;
-    width: 100%; 
+    width: 100%;
     height: 100vh;
     margin-top: 0.5em;
 }
-.texto-quienessomos{
+
+.texto-quienessomos {
     top: 5em;
     left: 5em;
     position: absolute;
@@ -29,26 +23,53 @@ body {
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    font-size:x-large;
+    font-size: x-large;
 }
 
-.contenedor{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-.texto-encima{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.centrado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.addicional {
+    width: 1027px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-footer{
+.reconocidos {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.carousel img {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+.user-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+footer {
     margin-top: 0 !important;
+}
+
+@media screen and (max-width: 1079px) {
+    .texto-quienessomos,
+    .addicional
+     {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .texto-quienessomos,
+    .addicional
+     {
+        width: 600px;
+    }
 }

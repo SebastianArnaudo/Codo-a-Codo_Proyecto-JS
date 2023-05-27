@@ -2,89 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/quienessomos.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Go! To Travel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" /> <!-- para que la imagen se adapte al dispositivo-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- libreria fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"> <!-- css bootstrap-->
+  <link rel="stylesheet" href="css/quienessomos.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <title>Go! To Travel</title>
 </head>
 
 <body>
-    <div class="contenedor"> <!-- Barra de navegacion-->
-        <header> <!-- Barra de navegacion--></header>
+  <header> <!-- Barra de navegacion--></header>
+  <div class="contenedor">
+    <img src="img/jisoo-kim-7DgXbusG1C4-unsplash.jpg" />
+    <div class="contenedor-quienessomos">
+      
+      <div class="texto-quienessomos">
+        <p><b>Go Travel</b>, es una reconocida empresa de viajes ubicada en Buenos Aires, C.
+          <br>Ofrecemos paquetes de viaje a precios asequibles.
+          <br>Nuestros servicios incluyen hoteles, vuelos, transporte, guías turísticos y excursiones.
+          <br>¡Veni a <b>Go Travel</b> para tu próxima aventura!
+        </p>
 
-        <div class="contenedor-quienessomos">
-            <img src="img/jisoo-kim-7DgXbusG1C4-unsplash.jpg" />
-            <div class="texto-quienessomos">
-                <p><b>Go Travel</b>, es una reconocida empresa de viajes ubicada en Buenos Aires, C.
-                    <br>Ofrecemos paquetes de viaje a precios asequibles.
-                    <br>Nuestros servicios incluyen hoteles, vuelos, transporte, guías turísticos y excursiones.
-                    <br>¡Veni a <b>Go Travel</b> para tu próxima aventura!
-                </p>
-                <br />
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4625.352959765735!2d-65.34267448868775!3d-36.475725573525665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1684359528419!5m2!1ses-419!2sar"
-                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="addicional">
+            <!-- mapa-->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4625.352959765735!2d-65.34267448868775!3d-36.475725573525665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1684359528419!5m2!1ses-419!2sar"
+            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- random user API-->
+          <div class="reconocidos">
+            <p class="reconocidos-titulo"> Nuestros clientes destacados:</p>
+            
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Los elementos del slider serán generados dinámicamente -->
+              </div>
             </div>
+          </div>
         </div>
+
+      </div>
     </div>
-    <footer>
-        <div class="container-footer-all">
-            <div class="container-body">
+  </div>
 
-                <div class="collogo">
-                    <img src="img/logo.png">
-                    <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
-                </div><!--collogo-->
+  <footer>
+    <div class="container-footer-all">
+      <div class="container-body">
 
-                <div class="colinformacion">
-                    <h1>Información</h1>
-                    <ul type="none">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#destinos">Viajes</a></li>
-                        <li><a href="quienessomos.html">Quiénes Somos</a></li>
-                        <li><a href="contactanos.html">Contáctenos</a></li>
-                    </ul>
-                </div><!--colinformacion-->
+        <div class="collogo">
+          <img src="img/logo.png">
+          <p class="Copyright">&copy;Copyright 2023 Go to Travel.<br>Todos los derechos reservados.</p>
+        </div><!--collogo-->
 
-                <div class="colayuda">
-                    <h1>Ayuda</h1>
-                    <ul type="none">
-                        <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais"
-                                target="_blank" rel="noopener noreferrer">Documentación para su viaje</a></li>
-                        <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia"
-                                target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
-                        <li><a href="http://mascotas.senasa.gob.ar" target="_blank" rel="noopener noreferrer"> Traslado
-                                de
-                                Mascotas</a></li>
-                    </ul>
-                </div><!--colayuda-->
+        <div class="colinformacion">
+          <h1>Información</h1>
+          <ul type="none">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#destinos">Viajes</a></li>
+            <li><a href="quienessomos.html">Quiénes Somos</a></li>
+            <li><a href="contactanos.html">Contáctenos</a></li>
+          </ul>
+        </div><!--colinformacion-->
 
-                <div class="colredes">
-                    <h1>Redes</h1>
-                    <table logos>
-                        <tr>
-                            <th><a href="https://wa.me/5491111112345?from=footer" target="_blank" rel="nofollow"><img
-                                        class="whatsapp" src="img/WSPlogo.png"></a></th>
-                            <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img
-                                        class="instagram" src="img/IGlogo.png"></a></th>
-                            <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook"
-                                        src="img/FBlogo.png"></a></th>
-                        </tr>
-                    </table>
-                </div><!--colredes-->
+        <div class="colayuda">
+          <h1>Ayuda</h1>
+          <ul type="none">
+            <li><a href="https://www.argentina.gob.ar/interior/migraciones/entrada-y-salida-del-pais" target="_blank"
+                rel="noopener noreferrer">Documentación para su viaje</a></li>
+            <li><a href="https://www.argentina.gob.ar/viajar-con-menores-de-edad-en-micros-de-larga-distancia"
+                target="_blank" rel="noopener noreferrer">Traslado de Menores</a></li>
+            <li><a href="http://mascotas.senasa.gob.ar" target="_blank" rel="noopener noreferrer"> Traslado
+                de
+                Mascotas</a></li>
+          </ul>
+        </div><!--colayuda-->
 
-            </div><!--container-body-->
-        </div><!--container-footer-all-->
-    </footer><!--footer-->
-    <script src="js/navbar.js"></script> <!-- barra de navegacion. Se llama luego del body, soluciona TypeError onclick-->
+        <div class="colredes">
+          <h1>Redes</h1>
+          <table logos>
+            <tr>
+              <th><a href="https://wa.me/5491111112345?from=footer" target="_blank" rel="nofollow"><img class="whatsapp"
+                    src="img/WSPlogo.png"></a></th>
+              <th><a href="https://www.instagram.com" target="_blank" rel="nofollow"><img class="instagram"
+                    src="img/IGlogo.png"></a></th>
+              <th><a href="https://www.facebook.com" target="_blank" rel="nofollow"><img class="facebook"
+                    src="img/FBlogo.png"></a></th>
+            </tr>
+          </table>
+        </div><!--colredes-->
+
+      </div><!--container-body-->
+    </div><!--container-footer-all-->
+  </footer><!--footer-->
+
+  <script src="js/navbar.js"></script> <!-- barra de navegacion. Se llama luego del body, soluciona TypeError onclick-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> <!-- bootstrap para carousel de clientes-->
+  <script src="js/randomUser.js"></script> <!-- API REST-->
 </body>
 
 </html>
